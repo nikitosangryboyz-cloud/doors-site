@@ -8,9 +8,9 @@
 fetch('./site.html')
   .then(r=>r.text())
   .then(html=>{
-    html=html.replace('</head>','<link rel="stylesheet" href="./responsive.css?v=1"><link rel="stylesheet" href="./responsive-fix.css?v=3"></head>');
+    html=html.replace('</head>','<link rel="stylesheet" href="./responsive.css?v=1"><link rel="stylesheet" href="./responsive-fix.css?v=4"></head>');
     html=html.replace('>ЭСТ<','>Двери<');
-    html=html.replace('</body>','<script src="./responsive-interactions.js?v=2"></script></body>');
+    html=html.replace('</body>','<scr'+'ipt src="./responsive-interactions.js?v=3"></scr'+'ipt></body>');
     document.open();
     document.write(html);
     document.close();
