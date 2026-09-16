@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Двери</title>
+<title>Двери под ключ</title>
 <style>html,body{margin:0;min-height:100%;background:#ecebe8}</style>
 </head>
 <body>
@@ -17,8 +17,8 @@
       return r.text();
     })
     .then(function(html){
-      html=html.replace('>ЭСТ<','>Двери<');
-      html=html.replace('</head>','<link rel="stylesheet" href="./responsive.css?v=1"><link rel="stylesheet" href="./responsive-fix.css?v=6"><link rel="stylesheet" href="./responsive-overrides.css?v=3"><link rel="stylesheet" href="./stats-floating.css?v=1"></head>');
+      html=html.replace('>ЭСТ<','>Двери под ключ<');
+      html=html.replace('</head>','<link rel="stylesheet" href="./responsive.css?v=1"><link rel="stylesheet" href="./responsive-fix.css?v=6"><link rel="stylesheet" href="./responsive-overrides.css?v=4"><link rel="stylesheet" href="./stats-floating.css?v=2"></head>');
 
       var parsed=new DOMParser().parseFromString(html,'text/html');
       document.documentElement.replaceWith(document.importNode(parsed.documentElement,true));
