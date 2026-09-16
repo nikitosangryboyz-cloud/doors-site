@@ -1,5 +1,30 @@
 /* RESPONSIVE DETAIL FIXES. Desktop is untouched. */
 
+/* Tablet stats strip: keep all four cards inside the hero/page grid and centered. */
+@media (min-width:701px) and (max-width:1150px){
+  .stats{
+    width:calc(100% - 52px) !important;
+    max-width:none !important;
+    margin:-24px auto 0 !important;
+    padding:0 !important;
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    position:relative !important;
+    left:auto !important;
+    right:auto !important;
+    transform:none !important;
+    box-sizing:border-box !important;
+    border-radius:14px !important;
+    overflow:hidden !important;
+  }
+  .stats .stat{
+    min-width:0 !important;
+    width:100% !important;
+    box-sizing:border-box !important;
+    padding:24px 14px 27px !important;
+    margin:0 !important;
+  }
+}
+
 /* Mobile hero catalogue link: hidden completely. */
 @media (max-width:700px){
   .hero .video{display:none !important;}
