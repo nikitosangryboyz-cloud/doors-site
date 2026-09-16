@@ -4,18 +4,53 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Двери</title>
-<script>
-fetch('./site.html')
-  .then(r=>r.text())
-  .then(html=>{
-    html=html.replace('</head>','<link rel="stylesheet" href="./responsive.css?v=1"><link rel="stylesheet" href="./responsive-fix.css?v=4"></head>');
-    html=html.replace('>ЭСТ<','>Двери<');
-    html=html.replace('</body>','<scr'+'ipt src="./responsive-interactions.js?v=3"></scr'+'ipt></body>');
-    document.open();
-    document.write(html);
-    document.close();
-  });
-</script>
+<style>html,body{margin:0;min-height:100%;background:#ecebe8}</style>
 </head>
-<body></body>
+<body>
+<script>
+(function(){
+  'use strict';
+
+  fetch('./site.html', {cache:'no-store'})
+    .then(function(r){
+      if(!r.ok) throw new Error('Не удалось загрузить site.html');
+      return r.text();
+    })
+    .then(function(html){
+      html=html.replace('>ЭСТ<','>Двери<');
+      html=html.replace('</head>','<link rel="stylesheet" href="./responsive.css?v=1"><link rel="stylesheet" href="./responsive-fix.css?v=5"></head>');
+
+      var parsed=new DOMParser().parseFromString(html,'text/html');
+      document.documentElement.replaceWith(document.importNode(parsed.documentElement,true));
+
+      var scripts=Array.prototype.slice.call(document.querySelectorAll('script'));
+      var index=0;
+
+      function runNext(){
+        if(index>=scripts.length){
+          document.dispatchEvent(new Event('DOMContentLoaded',{bubbles:true}));
+          window.dispatchEvent(new Event('load'));
+          return;
+        }
+        var old=scripts[index++];
+        var s=document.createElement('script');
+        Array.prototype.slice.call(old.attributes).forEach(function(a){s.setAttribute(a.name,a.value);});
+        s.textContent=old.textContent;
+        old.replaceWith(s);
+        if(s.src){s.onload=runNext;s.onerror=runNext;}else{runNext();}
+      }
+
+      runNext();
+
+      var mobileScript=document.createElement('script');
+      mobileScript.src='./responsive-interactions.js?v=4';
+      document.body.appendChild(mobileScript);
+    })
+    .catch(function(err){
+      document.body.innerHTML='<div style="padding:40px;font:16px Arial;color:#222">Ошибка загрузки сайта. Обновите страницу.</div>';
+      console.error(err);
+    });
+})();
+</script>
+</body>
 </html>
