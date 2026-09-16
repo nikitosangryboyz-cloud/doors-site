@@ -1,32 +1,8 @@
 /* RESPONSIVE DETAIL FIXES. Desktop is untouched. */
 
-/* Mobile hero catalogue link: center the entire control as one unit. */
+/* Mobile hero catalogue link: hidden completely. */
 @media (max-width:700px){
-  .hero .actions{
-    width:100% !important;
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:stretch !important;
-    justify-content:flex-start !important;
-  }
-
-  .hero .video{
-    width:max-content !important;
-    max-width:calc(100% - 20px) !important;
-    align-self:flex-start !important;
-    margin-left:50% !important;
-    margin-right:0 !important;
-    transform:translateX(-50%) !important;
-    position:relative !important;
-    left:0 !important;
-    right:auto !important;
-    justify-content:center !important;
-    white-space:nowrap !important;
-  }
-
-  .hero .video .play{
-    flex:0 0 38px !important;
-  }
+  .hero .video{display:none !important;}
 
   /* Mobile FAQ — clean cards. */
   .section--faq{overflow:hidden;}
