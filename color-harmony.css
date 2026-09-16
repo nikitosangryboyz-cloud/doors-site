@@ -1,0 +1,4 @@
+/* COLOR HARMONY — remove contrasting side gutters. */
+html,body{background:#f7f6f2 !important;}
+.page{background:#f7f6f2 !important;}
+@media (max-width:1150px){html,body{background:#f7f6f2 !important;}.page{background:#f7f6f2 !important;}}
