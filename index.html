@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Двери под ключ</title>
-<style>html,body{margin:0;min-height:100%;background:#ecebe8}</style>
+<style>html,body{margin:0;min-height:100%;background:#f7f6f2}</style>
 </head>
 <body>
 <script>
@@ -14,7 +14,7 @@
     .then(function(r){if(!r.ok)throw new Error('Не удалось загрузить site.html');return r.text();})
     .then(function(html){
       html=html.replace('>ЭСТ<','>Двери под ключ<');
-      html=html.replace('</head>','<link rel="stylesheet" href="./responsive.css?v=1"><link rel="stylesheet" href="./responsive-fix.css?v=6"><link rel="stylesheet" href="./responsive-overrides.css?v=4"><link rel="stylesheet" href="./stats-floating.css?v=2"><link rel="stylesheet" href="./visual-polish.css?v=1"><link rel="stylesheet" href="./final-art-direction.css?v=1"><link rel="stylesheet" href="./brand-fix.css?v=1"><link rel="stylesheet" href="./brand-final.css?v=1"></head>');
+      html=html.replace('</head>','<link rel="stylesheet" href="./responsive.css?v=1"><link rel="stylesheet" href="./responsive-fix.css?v=6"><link rel="stylesheet" href="./responsive-overrides.css?v=4"><link rel="stylesheet" href="./stats-floating.css?v=2"><link rel="stylesheet" href="./visual-polish.css?v=1"><link rel="stylesheet" href="./final-art-direction.css?v=1"><link rel="stylesheet" href="./brand-fix.css?v=1"><link rel="stylesheet" href="./brand-final.css?v=1"><link rel="stylesheet" href="./color-harmony.css?v=1"></head>');
       var parsed=new DOMParser().parseFromString(html,'text/html');
       document.documentElement.replaceWith(document.importNode(parsed.documentElement,true));
       var scripts=Array.prototype.slice.call(document.querySelectorAll('script'));var index=0;
