@@ -1,0 +1,25 @@
+/* FINAL BRAND TYPE — Montserrat only for the header lockup. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+#top .logo{
+  font-family:'Montserrat',Arial,Helvetica,sans-serif !important;
+  font-size:32px !important;
+  font-style:normal !important;
+  font-weight:500 !important;
+  letter-spacing:-1.5px !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+#top .logo small{
+  font-family:'Montserrat',Arial,Helvetica,sans-serif !important;
+  font-size:9px !important;
+  font-style:normal !important;
+  font-weight:500 !important;
+  letter-spacing:.10em !important;
+  line-height:1.2 !important;
+  margin-top:7px !important;
+}
+@media(max-width:700px){
+  #top .logo{font-size:28px !important;letter-spacing:-1.2px !important;}
+  #top .logo small{font-size:8px !important;letter-spacing:.08em !important;}
+}
