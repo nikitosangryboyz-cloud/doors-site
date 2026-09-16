@@ -1,0 +1,37 @@
+/* Section surfaces extend into the page gutters so no foreign side strip is visible. */
+html,body{background:#e9e7e2!important}
+.page{position:relative;overflow:visible}
+
+.section{
+  position:relative;
+  isolation:isolate;
+  box-shadow:0 0 0 100vmax var(--art-paper) !important;
+  clip-path:inset(0 -100vmax);
+}
+
+#catalog{box-shadow:0 0 0 100vmax #eeece6 !important}
+#about{box-shadow:0 0 0 100vmax #f5f3ee !important}
+#projects{box-shadow:0 0 0 100vmax #faf9f6 !important}
+#services{box-shadow:0 0 0 100vmax #f7f6f2 !important}
+#process{box-shadow:0 0 0 100vmax #eeece7 !important}
+.section--cases{box-shadow:0 0 0 100vmax #f5f3ee !important}
+.section--materials{box-shadow:0 0 0 100vmax #faf9f6 !important}
+.section--reviews{box-shadow:0 0 0 100vmax #eeece7 !important}
+.section--faq{box-shadow:0 0 0 100vmax #faf9f6 !important}
+.section--calculator{box-shadow:0 0 0 100vmax #eeece7 !important}
+#contacts{box-shadow:0 0 0 100vmax #f5f3ee !important}
+
+@media(max-width:700px){
+  .section{box-shadow:0 0 0 100vmax var(--art-paper)!important}
+  #catalog{box-shadow:0 0 0 100vmax #eeece6!important}
+  #about{box-shadow:0 0 0 100vmax #f5f3ee!important}
+  #projects{box-shadow:0 0 0 100vmax #faf9f6!important}
+  #services{box-shadow:0 0 0 100vmax #f7f6f2!important}
+  #process{box-shadow:0 0 0 100vmax #eeece7!important}
+  .section--cases{box-shadow:0 0 0 100vmax #f5f3ee!important}
+  .section--materials{box-shadow:0 0 0 100vmax #faf9f6!important}
+  .section--reviews{box-shadow:0 0 0 100vmax #eeece7!important}
+  .section--faq{box-shadow:0 0 0 100vmax #faf9f6!important}
+  .section--calculator{box-shadow:0 0 0 100vmax #eeece7!important}
+  #contacts{box-shadow:0 0 0 100vmax #f5f3ee!important}
+}
