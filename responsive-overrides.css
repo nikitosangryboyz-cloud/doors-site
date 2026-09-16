@@ -1,11 +1,11 @@
-/* FINAL OVERRIDES. Desktop is untouched except the requested floating stats row. */
+/* FINAL OVERRIDES. Desktop stats + mobile hero only. */
 
-/* Stats: slightly narrower than the hero, lifted over its bottom edge, with the next section visible behind it. */
+/* Desktop stats: almost edge-to-edge, slightly lower, floating over the hero/next section boundary. */
 .stats{
   position:relative !important;
   z-index:8 !important;
-  width:calc(100% - 160px) !important;
-  margin:-54px auto 0 !important;
+  width:calc(100% - 32px) !important;
+  margin:-30px auto 0 !important;
   background:#fff !important;
   border-radius:22px !important;
   border:1px solid rgba(30,30,30,.05) !important;
@@ -15,8 +15,8 @@
 
 @media (min-width:701px) and (max-width:1150px){
   .stats{
-    width:calc(100% - 96px) !important;
-    margin:-46px auto 0 !important;
+    width:calc(100% - 28px) !important;
+    margin:-28px auto 0 !important;
     border-radius:20px !important;
     box-shadow:0 15px 35px rgba(0,0,0,.13),0 3px 12px rgba(0,0,0,.05) !important;
   }
@@ -25,7 +25,7 @@
 @media (max-width:700px){
   .stats{
     width:calc(100% - 32px) !important;
-    margin:-34px auto 0 !important;
+    margin:-30px auto 0 !important;
     border-radius:17px !important;
     box-shadow:0 12px 28px rgba(0,0,0,.12),0 3px 9px rgba(0,0,0,.05) !important;
   }
@@ -65,13 +65,13 @@
 @media (max-width:375px){
   .stats{
     width:calc(100% - 24px) !important;
-    margin:-28px auto 0 !important;
+    margin:-26px auto 0 !important;
   }
   #catalog .door-tabs{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:6px !important;}
   #catalog .door-tab{min-height:38px;padding:7px 5px !important;font-size:11.5px !important;}
 }
 
-/* Mobile-only hero height: 20% shorter than the previous mobile hero. */
+/* Mobile-only hero: another 20% reduction from the previous version. */
 @media (max-width:600px){
-  .hero{height:clamp(432px,116vw,480px) !important;}
+  .hero{height:clamp(345px,93vw,390px) !important;}
 }
