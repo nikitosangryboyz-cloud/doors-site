@@ -1,4 +1,132 @@
-/* MOBILE MATERIALS SPACING FIX. Desktop is untouched. */
+/* RESPONSIVE DETAIL FIXES. Desktop is untouched. */
+
+/* FAQ: keep all question text comfortably inside the card on phones. */
+@media (max-width:700px){
+  .section--faq .faq{
+    padding-left:14px !important;
+    padding-right:14px !important;
+    min-width:0;
+  }
+
+  .section--faq .faq details{
+    padding:17px 0;
+  }
+
+  .section--faq .faq summary{
+    gap:14px;
+    padding:0;
+  }
+
+  .section--faq .faq summary::after{
+    flex:0 0 auto;
+    margin-top:1px;
+  }
+
+  .section--faq .faq details p{
+    padding-right:4px;
+  }
+
+  /* Reviews are a real horizontal carousel on mobile. */
+  .section--reviews .reviews{
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    gap:12px;
+    padding:2px 2px 8px;
+  }
+
+  .section--reviews .reviews::-webkit-scrollbar{display:none}
+
+  .section--reviews .review{
+    flex:0 0 min(86%,340px);
+    scroll-snap-align:start;
+    scroll-snap-stop:always;
+    min-width:0;
+  }
+
+  .reviews-ui{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-top:14px;
+  }
+
+  .reviews-ui__hint{
+    font-size:12px;
+    line-height:1.3;
+    color:#89857e;
+    letter-spacing:.02em;
+  }
+
+  .reviews-ui__actions{
+    display:flex;
+    align-items:center;
+    gap:7px;
+  }
+
+  .reviews-ui__button{
+    width:36px;
+    height:36px;
+    padding:0;
+    border:1px solid #d1cdc6;
+    border-radius:50%;
+    background:#fff;
+    color:#202020;
+    display:grid;
+    place-items:center;
+    font-size:16px;
+    line-height:1;
+  }
+
+  .reviews-ui__dots{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    margin-left:auto;
+  }
+
+  .reviews-ui__dot{
+    width:5px;
+    height:5px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:#c9c5be;
+  }
+
+  .reviews-ui__dot.is-active{
+    width:18px;
+    border-radius:999px;
+    background:#202020;
+  }
+}
+
+@media (min-width:701px){
+  .reviews-ui{display:none !important}
+}
+
+@media (max-width:375px){
+  .section--faq .faq{
+    padding-left:12px !important;
+    padding-right:12px !important;
+  }
+
+  .section--reviews .review{
+    flex-basis:88%;
+  }
+
+  .reviews-ui__hint{font-size:11px}
+  .reviews-ui__button{width:34px;height:34px}
+}
+
+/* Materials spacing fix retained from the previous mobile pass. */
 @media (max-width:600px){
   .section--materials{
     padding-left:16px !important;
