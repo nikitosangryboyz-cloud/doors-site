@@ -1,0 +1,40 @@
+/* Floating stats treatment. Desktop + all responsive sizes. */
+.stats{
+  position:relative !important;
+  z-index:8 !important;
+  margin: -34px 7% 0 !important;
+  border-radius:22px !important;
+  border:1px solid rgba(220,216,208,.9) !important;
+  box-shadow:0 20px 45px rgba(32,32,32,.14),0 4px 14px rgba(32,32,32,.07) !important;
+  background:rgba(255,255,255,.96) !important;
+}
+.stat{
+  position:relative !important;
+  padding:28px 24px 30px !important;
+}
+.stat + .stat::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:22px;
+  bottom:22px;
+  width:1px;
+  background:var(--line);
+}
+@media (min-width:701px){
+  .stats{margin-top:-36px !important;}
+}
+@media (max-width:700px){
+  .stats{
+    margin:-20px 12px 0 !important;
+    border-radius:18px !important;
+    box-shadow:0 14px 30px rgba(32,32,32,.12),0 3px 10px rgba(32,32,32,.06) !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+  .stat{padding:18px 12px 20px !important;}
+  .stat + .stat::before{top:14px;bottom:14px;}
+}
+@media (max-width:375px){
+  .stats{margin-top:-18px !important;}
+}
