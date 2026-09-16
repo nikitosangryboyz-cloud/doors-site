@@ -8,6 +8,7 @@
 fetch('./site.html')
   .then(r=>r.text())
   .then(html=>{
+    html=html.replace('</head>','<link rel="stylesheet" href="./responsive.css?v=1"></head>');
     html=html.replace('>ЭСТ<','>Двери<');
     document.open();
     document.write(html);
