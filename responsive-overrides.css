@@ -70,3 +70,8 @@
   #catalog .door-tabs{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:6px !important;}
   #catalog .door-tab{min-height:38px;padding:7px 5px !important;font-size:11.5px !important;}
 }
+
+/* Mobile-only hero height: 20% shorter than the previous mobile hero. */
+@media (max-width:600px){
+  .hero{height:clamp(432px,116vw,480px) !important;}
+}
