@@ -32,14 +32,23 @@
     width:100%;
     min-height:60px;
     margin:0;
-    padding:16px 0;
+    padding:16px 14px;
     box-sizing:border-box;
     align-items:center;
+  }
+
+  .section--materials .material span:first-child{
+    min-width:0;
+    padding-right:10px;
+  }
+
+  .section--materials .material span:last-child{
+    flex:0 0 auto;
   }
 }
 
 @media (max-width:375px){
   .section--materials .materials{gap:16px}
-  .section--materials .material{min-height:58px;padding:15px 0}
+  .section--materials .material{min-height:58px;padding:15px 13px}
   .section--materials .material-list{padding-bottom:58px}
 }
