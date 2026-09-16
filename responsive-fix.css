@@ -1,36 +1,43 @@
 /* RESPONSIVE DETAIL FIXES. Desktop is untouched. */
 
-/* FAQ: keep all question text comfortably inside the card on phones. */
 @media (max-width:700px){
+  /* FAQ: align the card with the content grid, then give the text real inner padding. */
   .section--faq .faq{
-    padding-left:14px !important;
-    padding-right:14px !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
     min-width:0;
+    width:100%;
   }
-
   .section--faq .faq details{
-    padding:17px 0;
+    width:100%;
+    box-sizing:border-box;
+    margin:0;
+    padding:17px 16px !important;
   }
-
   .section--faq .faq summary{
-    gap:14px;
-    padding:0;
+    width:100%;
+    box-sizing:border-box;
+    gap:12px;
+    padding:0 !important;
+    margin:0;
+    align-items:flex-start;
   }
-
   .section--faq .faq summary::after{
     flex:0 0 auto;
     margin-top:1px;
+    margin-left:auto;
   }
-
   .section--faq .faq details p{
-    padding-right:4px;
+    padding:0 !important;
+    margin-left:0;
+    margin-right:0;
   }
 
-  /* Reviews are a real horizontal carousel on mobile. */
+  /* Reviews: real horizontal carousel on mobile. */
   .section--reviews .reviews{
-    display:flex;
-    flex-wrap:nowrap;
-    overflow-x:auto;
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
     overflow-y:hidden;
     scroll-snap-type:x mandatory;
     scroll-behavior:smooth;
@@ -39,15 +46,17 @@
     scrollbar-width:none;
     gap:12px;
     padding:2px 2px 8px;
+    margin:0;
   }
-
   .section--reviews .reviews::-webkit-scrollbar{display:none}
-
   .section--reviews .review{
-    flex:0 0 min(86%,340px);
+    flex:0 0 calc(100% - 28px) !important;
+    width:calc(100% - 28px);
+    min-width:calc(100% - 28px);
+    margin:0;
     scroll-snap-align:start;
     scroll-snap-stop:always;
-    min-width:0;
+    box-sizing:border-box;
   }
 
   .reviews-ui{
@@ -56,125 +65,47 @@
     justify-content:space-between;
     gap:12px;
     margin-top:14px;
+    min-height:36px;
   }
-
   .reviews-ui__hint{
-    font-size:12px;
+    font-size:11px;
     line-height:1.3;
     color:#89857e;
-    letter-spacing:.02em;
+    letter-spacing:.01em;
   }
-
-  .reviews-ui__actions{
-    display:flex;
-    align-items:center;
-    gap:7px;
-  }
-
+  .reviews-ui__actions{display:flex;align-items:center;gap:7px;flex:0 0 auto}
   .reviews-ui__button{
-    width:36px;
-    height:36px;
-    padding:0;
-    border:1px solid #d1cdc6;
-    border-radius:50%;
-    background:#fff;
-    color:#202020;
-    display:grid;
-    place-items:center;
-    font-size:16px;
-    line-height:1;
+    width:35px;height:35px;padding:0;border:1px solid #d1cdc6;border-radius:50%;
+    background:#fff;color:#202020;display:grid;place-items:center;font-size:16px;line-height:1;
   }
-
-  .reviews-ui__dots{
-    display:flex;
-    align-items:center;
-    gap:5px;
-    margin-left:auto;
-  }
-
+  .reviews-ui__dots{display:flex;align-items:center;gap:5px;padding:0 2px}
   .reviews-ui__dot{
-    width:5px;
-    height:5px;
-    padding:0;
-    border:0;
-    border-radius:50%;
-    background:#c9c5be;
+    width:6px;height:6px;padding:0;border:0;border-radius:50%;background:#c9c5be;opacity:.7;
   }
-
-  .reviews-ui__dot.is-active{
-    width:18px;
-    border-radius:999px;
-    background:#202020;
-  }
+  .reviews-ui__dot.is-active{width:18px;border-radius:999px;background:#202020;opacity:1}
 }
 
-@media (min-width:701px){
-  .reviews-ui{display:none !important}
-}
+@media (min-width:701px){.reviews-ui{display:none !important}}
 
 @media (max-width:375px){
-  .section--faq .faq{
-    padding-left:12px !important;
-    padding-right:12px !important;
-  }
-
-  .section--reviews .review{
-    flex-basis:88%;
-  }
-
-  .reviews-ui__hint{font-size:11px}
-  .reviews-ui__button{width:34px;height:34px}
+  .section--faq .faq details{padding:16px 14px !important}
+  .section--faq .faq summary{font-size:15px;line-height:1.42}
+  .section--reviews .review{flex-basis:calc(100% - 20px) !important;min-width:calc(100% - 20px)}
+  .reviews-ui{margin-top:12px}
+  .reviews-ui__hint{font-size:10px}
+  .reviews-ui__button{width:33px;height:33px}
 }
 
 /* Materials spacing fix retained from the previous mobile pass. */
 @media (max-width:600px){
-  .section--materials{
-    padding-left:16px !important;
-    padding-right:16px !important;
-  }
-
-  .section--materials .materials{
-    width:100%;
-    margin:0;
-    gap:18px;
-    grid-template-columns:1fr;
-    align-items:stretch;
-  }
-
-  .section--materials .material-photo{
-    width:100%;
-    height:auto !important;
-    aspect-ratio:4 / 3;
-    margin:0;
-    border-radius:14px;
-  }
-
-  .section--materials .material-list{
-    width:100%;
-    margin:0;
-    padding:0 0 62px;
-    border-top:1px solid var(--line);
-  }
-
-  .section--materials .material{
-    width:100%;
-    min-height:60px;
-    margin:0;
-    padding:16px 14px;
-    box-sizing:border-box;
-    align-items:center;
-  }
-
-  .section--materials .material span:first-child{
-    min-width:0;
-    padding-right:10px;
-  }
-
-  .section--materials .material span:last-child{
-    flex:0 0 auto;
-  }
+  .section--materials{padding-left:16px !important;padding-right:16px !important}
+  .section--materials .materials{width:100%;margin:0;gap:18px;grid-template-columns:1fr;align-items:stretch}
+  .section--materials .material-photo{width:100%;height:auto !important;aspect-ratio:4 / 3;margin:0;border-radius:14px}
+  .section--materials .material-list{width:100%;margin:0;padding:0 0 62px;border-top:1px solid var(--line)}
+  .section--materials .material{width:100%;min-height:60px;margin:0;padding:16px 14px;box-sizing:border-box;align-items:center}
+  .section--materials .material span:first-child{min-width:0;padding-right:10px}
+  .section--materials .material span:last-child{flex:0 0 auto}
 }
-
 @media (max-width:375px){
   .section--materials .materials{gap:16px}
   .section--materials .material{min-height:58px;padding:15px 13px}
