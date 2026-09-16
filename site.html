@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ЭСТ — Двери под ключ в Москве</title>
+<meta content="Межкомнатные и входные двери под ключ в Москве: подбор, замер, комплектация, доставка и профессиональная установка." name="description"/>
+<style>
+
+:root{
+  --bg:#ecebe8;
+  --panel:#f8f8f6;
+  --card:#fff;
+  --ink:#202020;
+  --muted:#706d66;
+  --line:#dcd9d2;
+  --dark:#202020;
+  --max:1540px;
+  --r:22px;
+  --space-section:64px;
+  --space-section-bottom:68px;
+  --gap:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+body.modal-open{overflow:hidden}
+img{display:block;width:100%;max-width:100%}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+a,button,input,select,textarea{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid #202020;outline-offset:3px}
+
+.page{width:min(calc(100% - 40px),var(--max));margin:18px auto}
+.panel{background:var(--panel);border-radius:var(--r);overflow:hidden}
+
+.header{
+  min-height:82px;
+  padding:0 40px;
+  display:grid;
+  grid-template-columns:225px 1fr 245px;
+  gap:28px;
+  align-items:center
+}
+.logo{font-size:34px;letter-spacing:-2.2px;font-weight:500;line-height:.95}
+.logo small{display:block;margin-top:7px;font-size:11px;letter-spacing:.12em;color:#77736c}
+.nav{display:flex;justify-content:center;gap:28px;font-size:15px;color:#494741}
+.nav a{padding:10px 0}
+.nav a:hover{color:#000}
+.header-cta{
+  justify-self:end;background:#202020;color:#fff;border-radius:999px;
+  padding:14px 21px;font-size:16px;transition:transform .2s,background .2s
+}
+.header-cta:hover,.btn.dark:hover,.float:hover{background:#000;transform:translateY(-1px)}
+
+.hero{position:relative;height:620px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.34) 34%,rgba(0,0,0,.10) 62%,rgba(0,0,0,0) 82%)}
+.hero-copy{position:absolute;z-index:2;left:48px;top:68px;max-width:700px;padding-right:20px}
+.eyebrow{
+  font-size:13px;line-height:1.35;letter-spacing:.14em;text-transform:uppercase;
+  color:#817d76;margin-bottom:16px
+}
+.hero .eyebrow{color:rgba(255,255,255,.88)}
+.hero h1{
+  color:#fff;font-size:clamp(64px,5vw,72px);line-height:.96;letter-spacing:-3.7px;
+  font-weight:400;margin:0 0 20px;max-width:700px
+}
+.hero p{font-size:18px;line-height:1.5;color:rgba(255,255,255,.94);max-width:520px;margin:0 0 25px}
+.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:50px;padding:12px 20px;border:1px solid #cac6bf;border-radius:999px;
+  background:#fff;font-size:16px;transition:transform .2s,background .2s,border-color .2s
+}
+.btn:hover{transform:translateY(-1px);border-color:#aaa59d}
+.btn.dark{background:#202020;color:#fff;border-color:#202020}
+.btn:active,.header-cta:active,.float:active{transform:translateY(0)}
+.dot{width:28px;height:28px;border-radius:50%;background:#eceae6;color:#222;display:grid;place-items:center;margin:-3px -5px -3px 0}
+.video{display:flex;align-items:center;gap:10px;font-size:15px;color:#fff}
+.play{width:44px;height:44px;border:1px solid rgba(255,255,255,.7);border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.15);font-size:13px}
+.video:hover .play{background:rgba(255,255,255,.25)}
+.hero-card{
+  position:absolute;z-index:3;right:28px;bottom:26px;width:330px;padding:14px;
+  display:grid;grid-template-columns:62px 1fr;gap:13px;background:rgba(255,255,255,.84);
+  border:1px solid rgba(255,255,255,.9);border-radius:15px;backdrop-filter:blur(12px)
+}
+.hero-card img{width:62px;height:62px;object-fit:cover;border-radius:10px}
+.hero-card strong{display:block;font-size:14px;line-height:1.3;font-weight:500;margin:2px 0 7px}
+.hero-card span{font-size:12px;line-height:1.45;color:#77736d}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;padding:0 40px}
+.stat{padding:28px 20px 31px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat strong{display:block;font-size:28px;line-height:1;letter-spacing:-1.8px;font-weight:400;margin-bottom:9px}
+.stat span{font-size:15px;color:#77736c}
+
+.section{margin-top:16px;padding:var(--space-section) 52px var(--space-section-bottom)}
+.section-head{display:grid;grid-template-columns:1fr .9fr;gap:64px;align-items:end;margin-bottom:36px}
+.section-title{font-size:clamp(44px,3.6vw,52px);line-height:1.02;letter-spacing:-2.5px;font-weight:400;margin:0}
+.section-copy{font-size:17px;line-height:1.58;color:#6c6962;max-width:520px;justify-self:end;margin:0}
+
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+.benefit{
+  min-height:225px;padding:25px;background:#fff;border:1px solid #e0ddd8;border-radius:16px;
+  display:flex;flex-direction:column;justify-content:space-between
+}
+.icon{width:44px;height:44px;border:1px solid #d0ccc5;border-radius:50%;display:grid;place-items:center;font-size:16px}
+.benefit h3{font-size:28px;font-weight:500;margin:22px 0 8px}
+.benefit p{font-size:16px;line-height:1.5;color:#77736c;margin:0;max-width:290px}
+.benefit strong{display:block;font-size:28px;font-weight:400;letter-spacing:-1.4px;margin-top:17px}
+.benefit small{font-size:13px;color:#8a867f}
+
+.projects-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:26px}
+.outline{font-size:15px;padding:12px 17px;border-radius:999px;border:1px solid #cbc7c0;background:#fff;white-space:nowrap;transition:transform .2s,border-color .2s}
+.outline:hover{transform:translateY(-1px);border-color:#aaa59d}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.project{background:#fff;border:1px solid #dfdcd7;border-radius:16px;overflow:hidden}
+.project-image{height:320px;overflow:hidden}
+.project-image img{height:100%;object-fit:cover;transition:transform .45s}
+.project:hover .project-image img{transform:scale(1.03)}
+.project-body{padding:20px}
+.project h3{font-size:28px;font-weight:500;margin:0 0 10px}
+.meta{display:flex;flex-wrap:wrap;gap:9px;font-size:15px;color:#8a867f}
+.project-link{display:inline-flex;align-items:center;gap:9px;font-size:15px;margin-top:17px}
+.project-link i{font-style:normal;width:32px;height:32px;border:1px solid #cec9c2;border-radius:50%;display:grid;place-items:center}
+
+.dark-banner{margin-top:16px;height:320px;border-radius:22px;overflow:hidden;position:relative;background:#151515;color:#fff}
+.dark-banner img{position:absolute;inset:0;height:100%;object-fit:cover;opacity:.58}
+.dark-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,19,19,.94),rgba(19,19,19,.57),rgba(19,19,19,.12))}
+.dark-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:36px 46px;max-width:760px}
+.dark-content .eyebrow{color:#b4b1aa}
+.dark-content h2{font-size:clamp(44px,3.7vw,52px);line-height:1;letter-spacing:-2.5px;font-weight:400;margin:0 0 14px}
+.dark-content p{font-size:16px;line-height:1.55;color:#dedbd5;max-width:480px;margin:0 0 20px}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.service{min-height:215px;padding:25px;border:1px solid #dfdcd7;border-radius:15px;background:#fff;position:relative}
+.service-no{font-size:13px;color:#89857e}
+.service h3{font-size:28px;font-weight:500;margin:31px 0 9px;letter-spacing:-.5px}
+.service p{font-size:16px;line-height:1.52;color:#77736d;max-width:310px;margin:0;padding-right:38px}
+.service-arrow{position:absolute;right:17px;bottom:17px;width:38px;height:38px;border:1px solid #cbc7c1;border-radius:50%;display:grid;place-items:center}
+
+.process{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.step{min-height:190px;padding:23px 18px;border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step b{font-size:13px;color:#8b8780}
+.step h3{font-size:28px;font-weight:500;margin:34px 0 9px}
+.step p{font-size:16px;line-height:1.52;color:#77736e;margin:0}
+
+.cases{display:grid;grid-template-columns:1.35fr .65fr;gap:var(--gap)}
+.case-stack{display:grid;gap:var(--gap)}
+.case-large,.case-small{position:relative;overflow:hidden;border-radius:16px;background:#222}
+.case-large{min-height:540px}.case-small{min-height:262px}
+.case-large img,.case-small img{position:absolute;inset:0;height:100%;object-fit:cover}
+.case-large:after,.case-small:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 34%,rgba(0,0,0,.82))}
+.case-info{position:absolute;z-index:2;left:25px;right:25px;bottom:25px;color:#fff}
+.case-info span{font-size:12px;color:#dedbd5;text-transform:uppercase;letter-spacing:.08em}
+.case-info h3{font-size:32px;line-height:1;letter-spacing:-1.3px;font-weight:400;margin:8px 0 8px}
+.case-info p{font-size:16px;line-height:1.48;color:#dedbd5;margin:0;max-width:470px}
+
+.materials{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:start}
+.material-photo{height:370px;border-radius:16px;overflow:hidden}
+.material-photo img{height:100%;object-fit:cover}
+.material-list{border-top:1px solid var(--line)}
+.material{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);font-size:16px}
+.material span:last-child{color:#8e8982}
+
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.review{min-height:250px;padding:26px;background:#fff;border:1px solid #e0ddd8;border-radius:16px;display:flex;flex-direction:column}
+.stars{font-size:14px;letter-spacing:2px}
+.review blockquote{font-size:24px;line-height:1.28;letter-spacing:-.3px;margin:25px 0 auto}
+.review small{font-size:13px;color:#88837d}
+
+.faq-wrap{display:grid;grid-template-columns:.76fr 1.24fr;gap:70px}
+.faq{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;font-size:17px;line-height:1.4}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:#8f8a83;flex:0 0 auto}
+details[open] summary:after{content:"−"}
+details p{font-size:16px;line-height:1.55;color:#77736d;max-width:760px;margin:11px 0 0}
+
+.calculator{display:grid;grid-template-columns:1.08fr .92fr;gap:18px}
+.calc-visual{height:360px;border-radius:16px;overflow:hidden;position:relative;background:#222}
+.calc-visual img{position:absolute;inset:0;height:100%;object-fit:cover}
+.calc-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.08))}
+.calc-caption{position:absolute;z-index:2;left:25px;right:25px;bottom:26px;color:#fff}
+.calc-caption h3{font-size:28px;line-height:1;letter-spacing:-1.4px;font-weight:400;margin:0 0 9px}
+.calc-caption p{font-size:16px;line-height:1.45;color:#dedbd5;max-width:410px;margin:0}
+.calc-card{background:#fff;border:1px solid #ddd9d2;border-radius:16px;padding:26px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:#88847d;margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;padding:14px;font-size:16px;border:1px solid #d6d2cb;background:#fbfaf8;border-radius:8px;color:#222;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#8e8981}
+.total{border-top:1px solid var(--line);padding-top:17px;margin-top:3px}
+.total small{font-size:13px;color:#89857e}
+.total strong{display:block;font-size:38px;font-weight:400;letter-spacing:-1.6px;margin-top:5px}
+.calc-card>.btn{margin-top:19px}
+
+.contacts{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.contact{background:#fff;border:1px solid #dedbd5;border-radius:16px;padding:28px}
+.contact-actions{margin-top:19px}
+.contact h3{font-size:32px;line-height:1;letter-spacing:-1.7px;font-weight:400;margin:0 0 23px}
+.contact-row{border-top:1px solid var(--line);padding:18px 0}
+.contact-row small{display:block;font-size:13px;color:#8a867f;margin-bottom:7px}
+.contact-row a,.contact-row span{font-size:18px}
+.map{min-height:390px;border-radius:16px;background:linear-gradient(135deg,#ebe9e4,#dad7d1);position:relative;overflow:hidden}
+.map:before{content:"МОСКВА";position:absolute;left:25px;top:23px;font-size:12px;letter-spacing:.17em;color:#6e6a63}
+.map:after{content:"";position:absolute;inset:27% 16% 18% 14%;border:1px dashed #aaa59d;border-radius:47% 36% 49% 39%;transform:rotate(-8deg)}
+.map-label{position:absolute;inset:0;z-index:2;display:grid;place-items:center;font-size:16px;color:#6d6962}
+
+.footer{margin-top:16px;padding:26px 38px 32px;display:flex;align-items:end;justify-content:space-between;gap:25px}
+.footer-brand{font-size:29px;letter-spacing:-1.4px}
+.footer-brand small{display:block;font-size:11px;letter-spacing:.12em;color:#7d7972;margin-top:5px}
+.footer-links{display:flex;gap:25px;font-size:15px;color:#68645f}
+.footer-links a:hover{color:#111}
+.footer-note{font-size:12px;color:#8a867f}
+.float{position:fixed;right:22px;bottom:20px;z-index:20;border:0;background:#202020;color:#fff;border-radius:999px;padding:14px 19px;font-size:16px;box-shadow:0 10px 28px rgba(0,0,0,.16);transition:transform .2s,background .2s}
+
+.site-modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(20,20,20,.58);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s,visibility .2s}
+.site-modal.open{opacity:1;visibility:visible;pointer-events:auto}
+.site-modal__box{position:relative;width:min(100%,520px);max-height:calc(100vh - 40px);overflow:auto;background:#f8f8f6;border-radius:20px;padding:30px;box-shadow:0 24px 70px rgba(0,0,0,.22)}
+.site-modal__close{position:absolute;top:13px;right:13px;width:42px;height:42px;border:1px solid #d4d0c9;border-radius:50%;background:#fff;font-size:24px;line-height:1}
+.site-modal__eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#817d76;margin-bottom:15px}
+.site-modal__title{font-size:32px;line-height:1;letter-spacing:-1.7px;font-weight:400;margin:0 0 12px}
+.site-modal__text{font-size:16px;line-height:1.55;color:#6c6962;margin:0 0 21px;max-width:440px}
+.site-modal__form{display:grid;gap:12px}
+.site-modal__form input,.site-modal__form textarea{width:100%;padding:14px 15px;border:1px solid #d6d2cb;background:#fff;border-radius:9px;color:#222;outline:none;font-size:16px}
+.site-modal__form input:focus,.site-modal__form textarea:focus{border-color:#8e8981}
+.site-modal__form textarea{min-height:110px;resize:vertical}
+.modal-success{padding:8px 0;color:#222}.modal-success strong{display:block;font-size:17px;font-weight:500}.modal-success span{display:block;font-size:14px;color:#777;margin-top:8px}
+.site-modal__submit{min-height:50px;border:1px solid #202020;border-radius:999px;background:#202020;color:#fff;padding:12px 18px;font-size:16px}
+.site-modal__submit:hover{background:#000}
+
+/* === PRODUCT POPUP === */
+.product-modal{position:fixed;inset:0;z-index:1100;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(20,20,20,.62);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility .25s ease}
+.product-modal.open{opacity:1;visibility:visible;pointer-events:auto}
+.product-modal__box{position:relative;width:min(100%,1080px);aspect-ratio:4/3;max-height:calc(100vh - 40px);overflow:hidden;background:#f8f8f6;border-radius:24px;box-shadow:0 30px 100px rgba(0,0,0,.28);display:grid;grid-template-columns:42% 58%;transform:translateY(18px) scale(.98);transition:transform .35s cubic-bezier(.22,.61,.36,1)}
+.product-modal.open .product-modal__box{transform:none}
+.product-modal__image{min-width:0;min-height:0;overflow:hidden;background:#e8e4dc}
+.product-modal__image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .6s ease}
+.product-modal.open .product-modal__image img{transform:scale(1.015)}
+.product-modal__content{padding:44px 48px 42px;display:flex;flex-direction:column;min-width:0;overflow:auto}
+.product-modal__close{position:absolute;right:18px;top:18px;width:42px;height:42px;border:1px solid rgba(0,0,0,.12);border-radius:50%;background:rgba(255,255,255,.92);color:#202020;font-size:24px;line-height:1;z-index:2;cursor:pointer}
+.product-modal__eyebrow{font-size:12px;line-height:1.3;letter-spacing:.12em;text-transform:uppercase;color:#817d76;margin-bottom:16px}
+.product-modal__title{font-size:42px;line-height:1;letter-spacing:-2px;font-weight:500;margin:0 48px 10px 0}
+.product-modal__desc{font-size:16px;line-height:1.48;color:#68645d;max-width:540px;margin:0 0 24px}
+.product-modal__price{font-size:23px;font-weight:600;letter-spacing:-.4px;margin-bottom:24px}
+.product-modal__specs{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin-bottom:24px}
+.product-modal__spec{border-top:1px solid #dedad2;padding-top:10px}
+.product-modal__spec small{display:block;font-size:12px;color:#817d76;margin-bottom:5px}
+.product-modal__spec strong{font-size:14px;font-weight:500;line-height:1.35}
+.product-modal__label{font-size:13px;font-weight:600;margin-bottom:9px}
+.product-modal__sizes{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.product-modal__size{border:1px solid #d4d0c9;background:#fff;border-radius:999px;padding:10px 14px;font-size:14px;cursor:pointer;transition:.2s ease}
+.product-modal__size:hover,.product-modal__size.active{border-color:#202020;background:#202020;color:#fff}
+.product-modal__actions{display:flex;align-items:center;gap:12px;margin-top:auto}
+.product-modal__cta{flex:1;min-height:52px;border:0;border-radius:999px;background:#202020;color:#fff;padding:13px 20px;font-size:16px;font-weight:500;cursor:pointer}
+.product-modal__cta:hover{background:#000}
+.product-modal__note{font-size:12px;color:#817d76;line-height:1.4;max-width:210px}
+.door-details{cursor:pointer}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ---------- ENHANCED CATALOG + MOTION ---------- */
+.catalog-enhanced{background:#EEEDE7}
+.door-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.door-tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:11px 16px;font-size:14px;color:var(--muted);transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
+.door-tab:hover{transform:translateY(-1px)}
+.door-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.door-tools{display:grid;grid-template-columns:1fr 200px;gap:12px;margin-bottom:12px}
+.door-tools input,.door-tools select{height:48px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:0 14px;font-size:15px;color:var(--ink)}
+.door-tools input:focus,.door-tools select:focus{outline:0;border-color:var(--green);box-shadow:0 0 0 3px rgba(53,185,120,.12)}
+.door-count{font-size:15.5px;color:var(--muted);margin:0 0 16px}
+.door-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.door-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;transition:transform .35s var(--ease),box-shadow .35s ease,border-color .25s ease}
+.door-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--line-2)}
+.door-card.hidden{display:none}
+.door-visual{height:300px;position:relative;overflow:hidden;background:linear-gradient(135deg,#ddd8cf,#88837a)}
+.door-visual.light{background:linear-gradient(135deg,#eeeae3,#bdb7ac)}
+.door-visual.dark{background:linear-gradient(135deg,#5b5852,#242321)}
+.door-visual>span{position:absolute;z-index:2;top:14px;left:14px;background:#fff;border-radius:999px;padding:7px 11px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+.door-leaf{position:absolute;left:50%;top:24px;transform:translateX(-50%);width:175px;height:255px;background:linear-gradient(90deg,#625e56,#302e2a 9%,#514d46 88%,#272521);box-shadow:18px 25px 40px rgba(0,0,0,.24);transition:transform .55s var(--ease),box-shadow .4s ease}
+.door-card:hover .door-leaf{transform:translateX(-50%) translateY(-4px);box-shadow:18px 31px 44px rgba(0,0,0,.28)}
+.door-leaf:before{content:"";position:absolute;inset:22px;border:1px solid rgba(255,255,255,.2)}
+.door-leaf:after{content:"";position:absolute;right:14px;top:126px;width:8px;height:8px;border-radius:50%;background:#c3b291}
+.door-visual.light .door-leaf{background:linear-gradient(90deg,#f1eee8,#c7c1b7 10%,#e1dbd1 88%,#aaa49a)}
+.door-visual.light .door-leaf:after{background:#877d70}
+.door-visual.dark .door-leaf{background:linear-gradient(90deg,#46433e,#1e1d1a 9%,#35322d 88%,#191816)}
+.door-leaf.glass{background:linear-gradient(90deg,rgba(215,229,231,.8),rgba(78,91,91,.55));border:1px solid rgba(255,255,255,.55)}
+.door-leaf.glass:before{inset:0;border:1px solid rgba(255,255,255,.45)}
+.door-card-body{padding:20px}
+.door-card-body h3{font-size:23px;font-weight:600;margin:0 0 8px}
+.door-card-body p{font-size:17px;color:var(--muted);line-height:1.5;margin:0 0 18px}
+.door-card-body>div{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.door-card-body strong{font-size:19px;font-weight:600;letter-spacing:-.4px}
+.door-card-body button{border:0;background:transparent;font-size:15.5px;font-weight:600;color:var(--ink);padding:8px 0;transition:color .2s ease,transform .2s ease}
+.door-card-body button:hover{color:var(--green-ink);transform:translateX(2px)}
+
+/* --- Section rhythm --- */
+.section--visual{padding-top:76px;padding-bottom:82px}
+.section--visual .projects-head{margin-bottom:34px}
+.section--grid{padding-top:72px;padding-bottom:76px}
+.section--grid .section-head{margin-bottom:42px}
+.section--grid .service{min-height:238px;padding:28px}
+.section--steps{padding-top:76px;padding-bottom:78px}
+.section--steps .section-head{margin-bottom:46px}
+.section--steps .process{background:#f3f2ef;border-top:1px solid #d6d3cc;border-bottom:1px solid #d6d3cc}
+.section--steps .step{min-height:210px;padding:26px 20px}
+.section--cases{padding-top:82px;padding-bottom:84px}
+.section--cases .section-head{margin-bottom:40px}
+.section--materials{padding-top:76px;padding-bottom:80px}
+.section--materials .section-head{margin-bottom:42px}
+.section--reviews{padding-top:78px;padding-bottom:82px}
+.section--reviews .section-head{margin-bottom:42px}
+.section--reviews .review{min-height:275px;padding:30px}
+.section--faq{padding-top:78px;padding-bottom:82px}
+.section--faq .faq-wrap{align-items:start}
+.section--calculator{padding-top:82px;padding-bottom:86px}
+.section--calculator .section-head{margin-bottom:42px}
+
+/* ==========================================================
+   RESPONSIVE SYSTEM — consolidated (no duplicates)
+   Desktop base is NEVER changed here.
+   ========================================================== */
+
+@media(max-width:1150px){
+  .page{width:min(calc(100% - 28px),1150px)}
+  .header{grid-template-columns:1fr auto;padding:0 28px}
+  .nav{display:none}
+  .hero{height:580px}
+  .hero-copy{left:38px;top:52px;width:auto;max-width:700px;padding:0}
+  .hero h1{max-width:670px;font-size:clamp(54px,6.4vw,64px);line-height:.96;letter-spacing:-3.2px;margin-bottom:18px}
+  .hero p{max-width:560px;font-size:17px;line-height:1.5;margin-bottom:22px}
+  .actions{gap:11px}
+  .btn{min-height:48px;font-size:15px;padding:11px 18px}
+  .hero-card{right:50%;bottom:20px;width:380px;transform:translateX(50%);grid-template-columns:84px minmax(0,1fr);gap:15px;padding:15px;border-radius:17px}
+  .hero-card img{width:84px;height:84px;border-radius:12px}
+  .hero-card strong{font-size:16px;line-height:1.27;margin-bottom:8px}
+  .hero-card span{font-size:14px;line-height:1.4}
+  .stats{padding:0 26px}
+  .stat{padding:24px 16px 27px}
+  .stat strong{font-size:27px}
+  .stat span{font-size:14px}
+  .section{padding:58px 34px 64px}
+  .section-head{grid-template-columns:1fr;gap:15px;margin-bottom:36px}
+  .section-title{font-size:clamp(40px,5vw,48px);line-height:1;letter-spacing:-2.3px}
+  .section-copy{font-size:16px;line-height:1.55;max-width:700px;justify-self:start}
+  .benefits,.services,.projects,.reviews{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .benefit{min-height:218px;padding:24px}
+  .benefit h3{font-size:26px;line-height:1.06;margin:20px 0 9px}
+  .benefit p{font-size:16px;line-height:1.5}
+  .benefit strong{font-size:27px;margin-top:15px}
+  .projects-head{align-items:end;margin-bottom:24px}
+  .project-image{height:290px}
+  .project-body{padding:20px}
+  .project h3{font-size:27px;line-height:1.06}
+  .meta{font-size:14px;line-height:1.45}
+  .project-link{font-size:15px;margin-top:17px}
+  .dark-banner#lead{height:400px}
+  .dark-banner#lead .dark-content{padding:40px 42px;max-width:720px}
+  .dark-banner#lead .dark-content h2{font-size:clamp(40px,5vw,48px);line-height:1.02}
+  .dark-banner#lead .dark-content p{font-size:17px;line-height:1.55;max-width:520px}
+  .dark-banner#lead .hero-card{right:50%;bottom:22px;width:340px;transform:translateX(50%);grid-template-columns:72px 1fr;gap:15px;padding:16px}
+  .dark-banner#lead .hero-card img{width:72px;height:72px}
+  .dark-banner#lead .hero-card strong{font-size:16px}
+  .dark-banner#lead .hero-card span{font-size:14px;line-height:1.42}
+  .services{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .service{min-height:210px;padding:24px}
+  .service h3{font-size:26px;line-height:1.07;margin:28px 0 9px}
+  .service p{font-size:16px;line-height:1.5}
+  .process{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .step{min-height:185px;padding:23px 18px}
+  .step:nth-child(3n){border-right:0}
+  .step:nth-child(-n+3){border-bottom:1px solid var(--line)}
+  .step h3{font-size:25px;margin:29px 0 9px}
+  .step p{font-size:15.5px;line-height:1.5}
+  .cases,.materials,.calculator,.faq-wrap,.contacts{grid-template-columns:1fr}
+  .cases{gap:16px}
+  .case-large{min-height:430px}
+  .case-small{min-height:230px}
+  .material-photo{height:320px}
+  .materials{gap:30px}
+  .review{min-height:230px;padding:24px}
+  .review blockquote{font-size:21px;line-height:1.3;margin:22px 0 auto}
+  .faq-wrap{gap:38px}
+  details{padding:18px 0}
+  summary{font-size:17px}
+  details p{font-size:15.5px;line-height:1.55}
+  .calculator{gap:16px}
+  .calc-visual{height:320px}
+  .calc-card{padding:24px}
+  .field{margin-bottom:16px}
+  .field input,.field select,.field textarea{min-height:48px}
+  .contacts{gap:16px}
+  .contact{padding:25px}
+  .contact-row{padding:16px 0}
+  .contact h3{font-size:30px}
+  .contact-row a,.contact-row span{font-size:17px}
+  .map{min-height:320px}
+  #catalog .door-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  #catalog .door-card{height:100%;align-self:stretch}
+  #catalog .door-visual.photo{aspect-ratio:4 / 3}
+  #catalog .door-visual.photo img{width:100%;height:100% !important;object-fit:contain !important}
+  #catalog .door-card-body{min-height:154px;display:flex;flex-direction:column}
+  #catalog .door-card-body>div{margin-top:auto}
+  #catalog .door-card-body h3{font-size:23px}
+  #catalog .door-card-body p{font-size:15.5px;line-height:1.45}
+  .product-modal__box{width:min(calc(100vw - 40px),960px);max-height:calc(100vh - 40px)}
+  .product-modal__content{padding:32px 34px 30px}
+  .product-modal__title{font-size:38px}
+  .product-modal__desc{font-size:15px}
+}
+
+@media(max-width:900px){
+  .section--visual,.section--grid,.section--steps,.section--cases,.section--materials,.section--reviews,.section--faq,.section--calculator{padding-top:54px;padding-bottom:58px}
+  .section--grid .section-head,.section--steps .section-head,.section--cases .section-head,.section--materials .section-head,.section--reviews .section-head,.section--calculator .section-head{margin-bottom:30px}
+  .section--grid .service{min-height:210px;padding:23px}
+  .section--steps .step{min-height:180px;padding:22px 18px}
+  .section--reviews .review{min-height:230px;padding:24px}
+  .hero h1{font-size:clamp(48px,7.2vw,60px);letter-spacing:-3px}
+  .hero p{max-width:590px}
+}
+
+@media(max-width:700px){
+  :root{--space-section:40px;--space-section-bottom:44px;--gap:12px}
+  html,body{overflow-x:clip}
+  body{font-size:16px;line-height:1.5}
+  .page{width:calc(100% - 14px);margin:7px auto}
+  .panel{border-radius:18px}
+
+  .header{height:64px;min-height:64px;padding:0 14px;grid-template-columns:1fr auto;gap:10px}
+  .logo{font-size:28px;letter-spacing:-1.8px}
+  .logo small{font-size:8px;letter-spacing:.1em;margin-top:5px}
+  .header-cta{font-size:12px;padding:10px 12px;min-height:40px}
+  .nav{display:none}
+
+  .hero{height:580px}
+  .hero-copy{left:19px;right:19px;top:32px;width:auto;max-width:none;padding:0}
+  .hero .eyebrow{font-size:11px;line-height:1.3;margin-bottom:12px;letter-spacing:.13em}
+  .hero h1{max-width:none;font-size:clamp(40px,11vw,46px);line-height:.97;letter-spacing:-2.55px;margin-bottom:16px}
+  .hero p{max-width:none;font-size:16px;line-height:1.48;margin-bottom:19px}
+  .actions{gap:9px}
+  .hero .btn.dark{min-width:0;width:auto;min-height:48px;padding:11px 16px;font-size:15px}
+  .dot{width:26px;height:26px}
+  .video{gap:8px;font-size:14px;white-space:nowrap}
+  .play{width:40px;height:40px;font-size:12px}
+
+  .hero-card{left:14px;right:14px;bottom:13px;width:auto;grid-template-columns:78px minmax(0,1fr);gap:13px;padding:14px;border-radius:16px}
+  .hero-card img{width:78px;height:78px;border-radius:12px}
+  .hero-card strong{font-size:16px;line-height:1.25;margin:0 0 7px}
+  .hero-card span{font-size:13.5px;line-height:1.38}
+
+  .stats{grid-template-columns:1fr 1fr;padding:0 14px}
+  .stat{padding:19px 9px 21px}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .stat strong{font-size:25px;letter-spacing:-1.3px}
+  .stat span{font-size:13px;line-height:1.35}
+
+  .section{padding:40px 16px 44px;margin-top:12px}
+  .section-head{grid-template-columns:1fr;gap:12px;margin-bottom:25px}
+  .section-title{font-size:clamp(30px,8.8vw,36px);line-height:1.03;letter-spacing:-1.8px}
+  .section-copy{font-size:15.5px;line-height:1.5;max-width:none}
+  .eyebrow{font-size:11px;line-height:1.3;letter-spacing:.12em;margin-bottom:12px}
+
+  .benefits,.services,.projects,.reviews{grid-template-columns:1fr;gap:12px}
+  .benefit{min-height:0;padding:21px;display:block}
+  .benefit h3{font-size:25px;line-height:1.07;margin:20px 0 8px}
+  .benefit p{font-size:15.5px;line-height:1.48;max-width:none}
+  .benefit strong{font-size:27px;margin-top:14px}
+  .benefit small{font-size:12px}
+  .icon{width:42px;height:42px}
+
+  .projects-head{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:20px}
+  .projects-head .outline{font-size:14px;padding:10px 14px}
+  .project-image{height:auto;aspect-ratio:4 / 3}
+  .project-body{padding:18px}
+  .project h3{font-size:25px;line-height:1.07;letter-spacing:-.6px;margin-bottom:9px}
+  .meta{font-size:13.5px;line-height:1.4;gap:7px}
+  .project-link{font-size:14px;margin-top:15px}
+  .project-link i{width:30px;height:30px}
+
+  .dark-banner{height:auto;min-height:480px;margin-top:12px;border-radius:18px}
+  .dark-content{padding:28px 20px}
+  .dark-content h2{font-size:33px;line-height:1.05;letter-spacing:-1.5px;margin-bottom:13px}
+  .dark-content p{font-size:15.5px;line-height:1.5;max-width:none;margin-bottom:20px}
+  .dark-banner#lead{height:auto;min-height:520px;border-radius:18px}
+  .dark-banner#lead .dark-content{padding:28px 20px;max-width:none;justify-content:flex-start;padding-top:36px}
+  .dark-banner#lead .dark-content h2{font-size:33px;line-height:1.05;letter-spacing:-1.5px;margin-bottom:13px}
+  .dark-banner#lead .dark-content p{font-size:15.5px;line-height:1.5;max-width:none;margin-bottom:20px}
+  .dark-banner#lead .dark-content .btn{font-size:15px;padding:11px 17px}
+  .dark-banner#lead .hero-card{left:14px;right:14px;bottom:14px;width:auto;transform:none;grid-template-columns:74px minmax(0,1fr);gap:12px;padding:14px}
+  .dark-banner#lead .hero-card img{width:74px;height:74px}
+  .dark-banner#lead .hero-card strong{font-size:15px;line-height:1.26}
+  .dark-banner#lead .hero-card span{font-size:13px;line-height:1.38}
+
+  .service{min-height:0;padding:21px}
+  .service h3{font-size:25px;line-height:1.06;margin:28px 0 8px}
+  .service p{font-size:15.5px;line-height:1.48;max-width:none;padding-right:34px}
+  .service-arrow{right:15px;bottom:15px;width:36px;height:36px}
+
+  .process{grid-template-columns:1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .step{min-height:0;padding:20px 14px;border-right:0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .step h3{font-size:24px;line-height:1.06;margin:21px 0 7px}
+  .step p{font-size:15px;line-height:1.48}
+
+  .cases{grid-template-columns:1fr;gap:12px}
+  .case-large{min-height:360px}
+  .case-small{min-height:210px}
+  .case-info{left:18px;right:18px;bottom:18px}
+  .case-info span{font-size:10px}
+  .case-info h3{font-size:26px;line-height:1.03;letter-spacing:-1px;margin:7px 0 8px}
+  .case-info p{font-size:14px;line-height:1.45}
+
+  .materials{grid-template-columns:1fr;gap:22px}
+  .material-photo{height:auto;aspect-ratio:4 / 3}
+  .material{font-size:15px;padding:16px 0}
+
+  .review{min-height:0;padding:21px}
+  .review blockquote{font-size:20px;line-height:1.28;margin:20px 0 18px}
+  .review small{font-size:12px}
+
+  .faq-wrap{grid-template-columns:1fr;gap:18px}
+  details{padding:17px 0}
+  summary{font-size:16px;line-height:1.4}
+  details p{font-size:15px;line-height:1.5;margin-top:10px}
+
+  .calculator{grid-template-columns:1fr;gap:12px}
+  .calc-visual{height:auto;aspect-ratio:4 / 3}
+  .calc-caption{left:20px;right:20px;bottom:20px}
+  .calc-caption h3{font-size:26px}
+  .calc-caption p{font-size:14px;line-height:1.45}
+  .calc-card{padding:20px}
+  .field{margin-bottom:15px}
+  .field input,.field select,.field textarea{min-height:48px;padding:12px 13px;font-size:16px}
+  .calc-card>.btn{width:100%;min-height:48px}
+  .total strong{font-size:30px}
+
+  .contacts{grid-template-columns:1fr;gap:12px}
+  .contact{padding:21px}
+  .contact h3{font-size:28px;line-height:1.05;letter-spacing:-1px;margin-bottom:20px}
+  .contact-row{padding:15px 0}
+  .contact-row a,.contact-row span{font-size:16px}
+  .contact-row small{font-size:12px}
+  .map{min-height:250px}
+
+  #catalog .door-grid{grid-template-columns:1fr;gap:12px}
+  #catalog .door-card{height:auto;align-self:auto}
+  #catalog .door-visual.photo{aspect-ratio:4 / 3;height:auto !important}
+  #catalog .door-visual.photo img{width:100%;height:100% !important;object-fit:contain !important}
+  #catalog .door-card-body{min-height:0;display:block;padding:17px 17px 16px}
+  #catalog .door-card-body h3{font-size:23px;line-height:1.06}
+  #catalog .door-card-body p{font-size:15px;line-height:1.45;margin-bottom:17px}
+  #catalog .door-card-body strong{font-size:17px}
+  #catalog .door-card-body button{font-size:14.5px}
+
+  .door-tabs{gap:6px;margin-bottom:12px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;scrollbar-width:none}
+  .door-tabs::-webkit-scrollbar{display:none}
+  .door-tab{flex:0 0 auto;padding:9px 12px;font-size:13px;min-height:40px}
+  .door-tools{grid-template-columns:1fr;gap:9px;margin-bottom:10px}
+  .door-tools input,.door-tools select{height:46px;font-size:15px;border-radius:11px}
+  .door-count{font-size:14px;margin-bottom:14px}
+
+  .product-modal{padding:8px}
+  .product-modal__box{width:100%;height:min(760px,calc(100vh - 16px));max-height:none;aspect-ratio:auto;grid-template-columns:1fr;grid-template-rows:36% 64%;border-radius:17px}
+  .product-modal__image img{object-fit:contain;background:#e8e4dc}
+  .product-modal__content{padding:20px 18px 18px}
+  .product-modal__title{font-size:31px;line-height:1.02;letter-spacing:-1.3px}
+  .product-modal__desc{font-size:14.5px;line-height:1.45;margin-bottom:16px}
+  .product-modal__price{font-size:20px;margin-bottom:16px}
+  .product-modal__specs{gap:10px 15px;margin-bottom:16px}
+  .product-modal__spec small{font-size:11px}
+  .product-modal__spec strong{font-size:13px}
+  .product-modal__sizes{gap:7px;margin-bottom:16px}
+  .product-modal__size{padding:9px 11px;font-size:13px}
+  .product-modal__actions{gap:9px}
+  .product-modal__cta{min-height:48px;font-size:15px;padding:11px 16px}
+  .product-modal__note{font-size:11px;line-height:1.35;max-width:none}
+  .product-modal__close{width:40px;height:40px;right:10px;top:10px;font-size:22px}
+
+  .site-modal{padding:8px}
+  .site-modal__box{max-height:calc(100vh - 16px);padding:22px 17px 19px;border-radius:16px}
+  .site-modal__title{font-size:28px;line-height:1.03}
+  .site-modal__text{font-size:15px;line-height:1.5}
+  .site-modal__form input,.site-modal__form textarea{font-size:16px;min-height:48px}
+  .site-modal__submit{min-height:48px;font-size:15px}
+
+  .footer{padding:20px 16px 24px;flex-direction:column;align-items:flex-start;gap:18px}
+  .footer-links{flex-wrap:wrap;gap:11px 15px;font-size:14px}
+  .footer-note{font-size:11px}
+  .float{right:10px;bottom:10px;padding:11px 14px;font-size:14px}
+}
+
+@media(max-width:480px){
+  .hero{height:600px}
+  .hero h1{font-size:clamp(34px,10vw,42px);letter-spacing:-2.2px}
+  .hero .btn.dark{min-width:0;width:100%;justify-content:center}
+  .hero-card{grid-template-columns:68px minmax(0,1fr);gap:12px;padding:13px}
+  .hero-card img{width:68px;height:68px}
+  .hero-card strong{font-size:15px}
+  .hero-card span{font-size:13px}
+  .section-title{font-size:clamp(26px,7.5vw,32px)}
+  .stat strong{font-size:22px}
+  .stat span{font-size:12px;line-height:1.3}
+  .benefit h3{font-size:23px}
+  .service h3{font-size:23px}
+  .step h3{font-size:22px}
+  .review blockquote{font-size:18px}
+  .dark-banner#lead .dark-content h2{font-size:28px}
+}
+
+@media(max-width:360px){
+  .header{padding:0 11px}
+  .logo{font-size:25px}
+  .logo small{font-size:7px}
+  .header-cta{font-size:11px;padding:9px 10px}
+  .hero{height:610px}
+  .hero-copy{left:17px;right:17px;top:29px}
+  .hero h1{font-size:36px;letter-spacing:-2px}
+  .hero p{font-size:15px}
+  .hero-card{grid-template-columns:62px minmax(0,1fr);gap:10px;padding:11px}
+  .hero-card img{width:62px;height:62px}
+  .hero-card strong{font-size:14px}
+  .hero-card span{font-size:12px}
+  .section{padding-left:14px;padding-right:14px}
+  .section-title{font-size:26px}
+  .video{white-space:normal}
+  .stat strong{font-size:20px}
+  .product-modal__box{grid-template-rows:30% 70%}
+  .calc-card>.btn{font-size:14px;padding:10px 14px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .motion-ready .reveal,.motion-ready .hero .hero-copy,.motion-ready .hero .hero-bottom,.motion-ready .door-card,.motion-ready .service,.motion-ready .benefit,.motion-ready .project,.motion-ready .step,.motion-ready .material,.motion-ready .review,.motion-ready .case{opacity:1;transform:none;transition:none}
+  .door-card,.door-leaf{transition:none}
+}
+
+.motion-ready .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.motion-ready .reveal.is-visible{opacity:1;transform:none}
+.motion-ready .hero .hero-copy{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.motion-ready .hero .hero-copy.is-visible{opacity:1;transform:translateY(0)}
+.motion-ready .hero .hero-bottom{opacity:0;transform:translateY(14px);transition:opacity .7s .18s var(--ease),transform .7s .18s var(--ease)}
+.motion-ready .hero .hero-bottom.is-visible{opacity:1;transform:none}
+.motion-ready .door-card,.motion-ready .service,.motion-ready .benefit,.motion-ready .project,.motion-ready .step,.motion-ready .material,.motion-ready .review,.motion-ready .case{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease),transform .6s var(--ease),box-shadow .3s ease,border-color .25s ease}
+.motion-ready .door-card.is-visible,.motion-ready .service.is-visible,.motion-ready .benefit.is-visible,.motion-ready .project.is-visible,.motion-ready .step.is-visible,.motion-ready .material.is-visible,.motion-ready .review.is-visible,.motion-ready .case.is-visible{opacity:1;transform:none}
+</style>
+<style>
+/* Финальная настройка CTA-блока и карточки на hero */
+.dark-banner#lead{height:420px}
+.dark-banner#lead .dark-content{max-width:860px;padding:48px 56px}
+.dark-banner#lead .dark-content h2{font-size:clamp(44px,3.7vw,52px);line-height:1.06;margin-bottom:18px}
+.dark-banner#lead .dark-content p{font-size:18px;line-height:1.6;max-width:620px;margin-bottom:26px}
+.dark-banner#lead .dark-content .btn{width:max-content;min-width:0;padding:13px 22px;font-size:16px;white-space:nowrap}
+.dark-banner#lead .hero-card{right:34px;bottom:30px;width:390px;grid-template-columns:72px 1fr;gap:18px;padding:20px;border-radius:18px}
+.dark-banner#lead .hero-card img{width:72px;height:72px;border-radius:12px}
+.dark-banner#lead .hero-card strong{font-size:17px;line-height:1.35;margin:1px 0 9px}
+.dark-banner#lead .hero-card span{font-size:15px;line-height:1.5;color:#77736d}
+@media (max-width:900px){
+  .dark-banner#lead{height:430px}
+  .dark-banner#lead .dark-content{padding:36px 30px;max-width:700px}
+  .dark-banner#lead .dark-content p{max-width:560px}
+  .dark-banner#lead .hero-card{right:20px;bottom:20px;width:360px}
+}
+@media (max-width:640px){
+  .dark-banner#lead{height:560px}
+  .dark-banner#lead .dark-content{padding:30px 22px;justify-content:flex-start;padding-top:44px}
+  .dark-banner#lead .dark-content h2{font-size:34px;line-height:1.08;letter-spacing:-1.2px}
+  .dark-banner#lead .dark-content p{font-size:16px;line-height:1.55;max-width:none;margin-bottom:22px}
+  .dark-banner#lead .dark-content .btn{font-size:15px;padding:12px 18px}
+  .dark-banner#lead .hero-card{left:14px;right:14px;bottom:14px;width:auto;grid-template-columns:60px 1fr;gap:14px;padding:16px}
+  .dark-banner#lead .hero-card img{width:60px;height:60px}
+  .dark-banner#lead .hero-card strong{font-size:16px}
+  .dark-banner#lead .hero-card span{font-size:14px;line-height:1.45}
+}
+</style><style>
+/* Hero hierarchy cleanup */
+.hero-assurance{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:24px;font-size:14px;line-height:1.4;font-weight:500;opacity:.92}
+.hero-assurance span{display:inline-flex;align-items:center;gap:8px}
+.hero-assurance span::before{content:"✓";font-weight:700}
+@media (max-width:700px){.hero-assurance{gap:8px 16px;margin-top:20px;font-size:13px}.hero-assurance span{flex:0 0 auto}}
+</style>
+<style>
+/* Final hero/card balance fix */
+.hero-copy.is-visible{
+  transform:translateY(0) !important;
+}
+.motion-ready .hero .hero-copy.is-visible{
+  transform:translateY(0) !important;
+}
+.hero .btn,
+.dark-banner#lead .dark-content .btn{
+  color:#202020 !important;
+}
+.hero .btn{
+  min-width:254px;
+  padding:13px 20px 13px 24px;
+  justify-content:space-between;
+}
+.hero-card{
+  width:410px;
+  padding:18px;
+  grid-template-columns:92px minmax(0,1fr);
+  gap:18px;
+  align-items:center;
+  border-radius:18px;
+}
+.hero-card img{
+  width:92px;
+  height:92px;
+  border-radius:13px;
+}
+.hero-card strong{
+  font-size:17px;
+  line-height:1.25;
+  margin:0 0 10px;
+}
+.hero-card span{
+  display:block;
+  font-size:15px;
+  line-height:1.35;
+  color:#77736d;
+}
+@media (max-width:900px){
+  .hero-card{width:370px;grid-template-columns:82px minmax(0,1fr);gap:16px;padding:16px}
+  .hero-card img{width:82px;height:82px}
+}
+@media (max-width:700px){
+  .hero .btn{min-width:0;width:auto}
+  .hero-card{left:14px;right:14px;bottom:14px;width:auto;grid-template-columns:76px minmax(0,1fr);gap:14px;padding:15px}
+  .hero-card img{width:76px;height:76px}
+  .hero-card strong{font-size:16px;line-height:1.25;margin-bottom:8px}
+  .hero-card span{font-size:14px;line-height:1.35}
+}
+</style>
+
+<style id="asset-photo-overrides">
+/* Local project assets: HTML is expected to live in folder 3 beside /assets. */
+.door-visual.photo {
+  overflow: hidden;
+  position: relative;
+  background: #e8e4de;
+}
+.door-visual.photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.12));
+  pointer-events: none;
+}
+.door-visual.photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .65s cubic-bezier(.2,.7,.2,1);
+}
+.door-card:hover .door-visual.photo img { transform: scale(1.045); }
+.hero .hero-bg { object-fit: cover; object-position: center center; }
+.hero .hero-copy, .hero .hero-copy * { opacity: 1; visibility: visible; }
+.hero .hero-copy { transform: none !important; }
+.hero .hero-cta, .hero .hero-cta * { color: #161616 !important; }
+.hero .hero-cta { position: relative; z-index: 5; }
+@media (max-width: 800px) {
+  .hero .hero-copy { transform: none !important; }
+  .door-visual.photo { min-height: 280px; }
+}
+</style>
+
+<style id="catalog-photo-grid-final">
+/* Product catalog: preserve the source photo proportions and build a cleaner editorial grid. */
+#catalog .door-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+  align-items:start;
+}
+#catalog .door-card{
+  display:flex;
+  flex-direction:column;
+  align-self:start;
+  min-width:0;
+  height:auto;
+  border:1px solid #dedbd5;
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 1px 0 rgba(32,32,32,.03);
+}
+#catalog .door-visual.photo{
+  height:auto;
+  min-height:0;
+  aspect-ratio:auto;
+  background:#eeeae3;
+  overflow:hidden;
+}
+#catalog .door-visual.photo img{
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:initial;
+  object-position:center;
+}
+#catalog .door-card-body{
+  display:block;
+  padding:20px 21px 18px;
+}
+#catalog .door-card-body h3{
+  margin-bottom:7px;
+  font-size:24px;
+  line-height:1.08;
+  letter-spacing:-.55px;
+}
+#catalog .door-card-body p{
+  margin-bottom:20px;
+  font-size:15.5px;
+  line-height:1.45;
+}
+#catalog .door-card-body>div{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding-top:2px;
+}
+#catalog .door-card-body strong{font-size:18px}
+#catalog .door-card-body button{font-size:15px}
+#catalog .door-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 42px rgba(32,32,32,.10);
+}
+#catalog .door-card:hover .door-visual.photo img{transform:scale(1.025)}
+@media(max-width:1100px){
+  #catalog .door-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+}
+@media(max-width:700px){
+  #catalog .door-grid{grid-template-columns:1fr;gap:16px}
+  #catalog .door-card-body{padding:18px 18px 17px}
+  #catalog .door-card-body h3{font-size:22px}
+}
+/* Fix: cards with different source photo proportions must keep their own natural height. */
+#catalog .door-grid{align-items:start;}
+#catalog .door-card{height:auto !important;align-self:start;}
+#catalog .door-card-body{flex:none !important;}
+#catalog .door-card-body>div{margin-top:0 !important;}
+#catalog .door-visual.photo{height:auto !important;aspect-ratio:auto !important;}
+#catalog .door-visual.photo img{height:auto !important;max-height:none !important;object-fit:initial !important;}
+</style>
+
+<style id="catalog-card-size-fix">
+/* Final catalog card normalization: identical card proportions without cropping source photos. */
+#catalog .door-grid{
+  align-items:stretch;
+}
+#catalog .door-card{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+#catalog .door-visual.photo{
+  width:100%;
+  height:auto !important;
+  aspect-ratio:4 / 3;
+  min-height:0;
+  overflow:hidden;
+  background:#eeeae3;
+  flex:0 0 auto;
+}
+#catalog .door-visual.photo img{
+  width:100%;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center;
+  background:#eeeae3;
+}
+#catalog .door-card-body{
+  flex:1 1 auto;
+  min-height:160px;
+  display:flex;
+  flex-direction:column;
+}
+#catalog .door-card-body > div{
+  margin-top:auto;
+}
+@media(max-width:700px){
+  #catalog .door-visual.photo{aspect-ratio:4 / 3;}
+  #catalog .door-card-body{min-height:0;}
+}
+</style>
+
+<style id="responsive-system-polished">
+/* ==========================================================
+   RESPONSIVE SYSTEM — tablet + mobile only
+   Desktop (min-width: 1151px) is intentionally untouched.
+   ========================================================== */
+
+@media (min-width: 701px) and (max-width: 1150px){
+  :root{
+    --space-section:58px;
+    --space-section-bottom:64px;
+    --gap:16px;
+  }
+
+  body{font-size:16px;line-height:1.52;overflow-x:clip}
+  .page{width:min(calc(100% - 32px),1080px);margin:14px auto}
+
+  .header{
+    min-height:76px;
+    padding:0 26px;
+    grid-template-columns:1fr auto;
+    gap:18px;
+  }
+  .nav{display:none}
+  .logo{font-size:32px}
+  .logo small{font-size:10px;margin-top:6px}
+  .header-cta{font-size:14px;padding:12px 18px}
+
+  .hero{height:560px}
+  .hero-copy{
+    left:38px;
+    right:38px;
+    top:52px;
+    width:auto;
+    max-width:700px;
+    padding:0;
+  }
+  .hero h1{
+    max-width:670px;
+    font-size:clamp(54px,6.4vw,64px);
+    line-height:.96;
+    letter-spacing:-3.2px;
+    margin-bottom:18px;
+  }
+  .hero p{
+    max-width:560px;
+    font-size:17px;
+    line-height:1.5;
+    margin-bottom:22px;
+  }
+  .actions{gap:11px}
+  .btn{min-height:48px;font-size:15px;padding:11px 18px}
+  .video{font-size:15px}
+  .play{width:42px;height:42px}
+
+  .hero-card{
+    right:22px;
+    bottom:20px;
+    width:380px;
+    grid-template-columns:84px minmax(0,1fr);
+    gap:15px;
+    padding:15px;
+    border-radius:17px;
+  }
+  .hero-card img{width:84px;height:84px;border-radius:12px}
+  .hero-card strong{font-size:16px;line-height:1.27;margin-bottom:8px}
+  .hero-card span{font-size:14px;line-height:1.4}
+
+  .stats{padding:0 26px}
+  .stat{padding:24px 16px 27px}
+  .stat strong{font-size:27px}
+  .stat span{font-size:14px}
+
+  .section{padding:58px 34px 64px}
+  .section-head{grid-template-columns:1fr;gap:14px;margin-bottom:32px}
+  .section-title{font-size:clamp(40px,5vw,48px);line-height:1;letter-spacing:-2.3px}
+  .section-copy{font-size:16px;line-height:1.55;max-width:700px;justify-self:start}
+
+  .benefits,.services,.projects,.reviews{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .benefit{min-height:218px;padding:24px}
+  .benefit h3{font-size:26px;line-height:1.06;margin:20px 0 9px}
+  .benefit p{font-size:16px;line-height:1.5}
+  .benefit strong{font-size:27px;margin-top:15px}
+
+  .projects-head{align-items:end;margin-bottom:24px}
+  .project-image{height:290px}
+  .project-body{padding:20px}
+  .project h3{font-size:27px;line-height:1.06}
+  .meta{font-size:14px;line-height:1.45}
+  .project-link{font-size:15px;margin-top:17px}
+
+  .dark-banner#lead{height:390px}
+  .dark-banner#lead .dark-content{padding:40px 42px;max-width:720px}
+  .dark-banner#lead .dark-content h2{font-size:clamp(40px,5vw,48px);line-height:1.02}
+  .dark-banner#lead .dark-content p{font-size:17px;line-height:1.55;max-width:520px}
+  .dark-banner#lead .hero-card{right:24px;bottom:22px;width:340px;grid-template-columns:72px 1fr;gap:15px;padding:16px}
+  .dark-banner#lead .hero-card img{width:72px;height:72px}
+  .dark-banner#lead .hero-card strong{font-size:16px}
+  .dark-banner#lead .hero-card span{font-size:14px;line-height:1.42}
+
+  .services{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .service{min-height:210px;padding:24px}
+  .service h3{font-size:26px;line-height:1.07;margin:28px 0 9px}
+  .service p{font-size:16px;line-height:1.5}
+
+  .process{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .step{min-height:185px;padding:23px 18px}
+  .step:nth-child(3n){border-right:0}
+  .step:nth-child(-n+3){border-bottom:1px solid var(--line)}
+  .step h3{font-size:25px;margin:29px 0 9px}
+  .step p{font-size:15.5px;line-height:1.5}
+
+  .cases,.materials,.calculator,.faq-wrap,.contacts{grid-template-columns:1fr}
+  .cases{gap:16px}
+  .case-large{min-height:430px}
+  .case-small{min-height:230px}
+  .material-photo{height:320px}
+  .materials{gap:30px}
+
+  .review{min-height:230px;padding:24px}
+  .review blockquote{font-size:21px;line-height:1.3;margin:22px 0 auto}
+
+  .faq-wrap{gap:38px}
+  details{padding:18px 0}
+  summary{font-size:17px}
+  details p{font-size:15.5px;line-height:1.55}
+
+  .calculator{gap:16px}
+  .calc-visual{height:320px}
+  .calc-card{padding:24px}
+  .field{margin-bottom:16px}
+  .field input,.field select,.field textarea{min-height:48px}
+
+  .contacts{gap:16px}
+  .contact{padding:25px}
+  .contact-row{padding:16px 0}
+  .contact h3{font-size:30px}
+  .contact-row a,.contact-row span{font-size:17px}
+  .map{min-height:320px}
+
+  #catalog .door-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  #catalog .door-card{height:100%;align-self:stretch}
+  #catalog .door-visual.photo{aspect-ratio:4 / 3}
+  #catalog .door-visual.photo img{width:100%;height:100% !important;object-fit:contain !important}
+  #catalog .door-card-body{min-height:154px;display:flex;flex-direction:column}
+  #catalog .door-card-body>div{margin-top:auto}
+  #catalog .door-card-body h3{font-size:23px}
+  #catalog .door-card-body p{font-size:15.5px;line-height:1.45}
+
+  .product-modal__box{width:min(calc(100vw - 40px),960px);max-height:calc(100vh - 40px)}
+  .product-modal__content{padding:32px 34px 30px}
+  .product-modal__title{font-size:38px}
+  .product-modal__desc{font-size:15px}
+}
+
+@media (max-width:700px){
+  :root{
+    --space-section:40px;
+    --space-section-bottom:44px;
+    --gap:12px;
+  }
+
+  html,body{overflow-x:clip}
+  body{font-size:16px;line-height:1.5}
+  .page{width:calc(100% - 14px);margin:7px auto}
+  .panel{border-radius:18px}
+
+  .header{
+    height:64px;
+    min-height:64px;
+    padding:0 14px;
+    grid-template-columns:1fr auto;
+    gap:10px;
+  }
+  .logo{font-size:28px;letter-spacing:-1.8px}
+  .logo small{font-size:8px;letter-spacing:.1em;margin-top:5px}
+  .header-cta{font-size:12px;padding:10px 12px;min-height:40px}
+  .nav{display:none}
+
+  .hero{height:575px}
+  .hero-copy{
+    left:19px;
+    right:19px;
+    top:32px;
+    width:auto;
+    max-width:none;
+    padding:0;
+  }
+  .hero .eyebrow{font-size:11px;line-height:1.3;margin-bottom:12px;letter-spacing:.13em}
+  .hero h1{
+    max-width:none;
+    font-size:clamp(40px,11vw,46px);
+    line-height:.97;
+    letter-spacing:-2.55px;
+    margin-bottom:16px;
+  }
+  .hero p{
+    max-width:none;
+    font-size:16px;
+    line-height:1.48;
+    margin-bottom:19px;
+  }
+  .actions{gap:9px}
+  .hero .btn.dark{min-width:0;width:auto;min-height:48px;padding:11px 16px;font-size:15px}
+  .dot{width:26px;height:26px}
+  .video{gap:8px;font-size:14px;white-space:nowrap}
+  .play{width:40px;height:40px;font-size:12px}
+
+  .hero-card{
+    left:14px;
+    right:14px;
+    bottom:13px;
+    width:auto;
+    grid-template-columns:78px minmax(0,1fr);
+    gap:13px;
+    padding:14px;
+    border-radius:16px;
+  }
+  .hero-card img{width:78px;height:78px;border-radius:12px}
+  .hero-card strong{font-size:16px;line-height:1.25;margin:0 0 7px}
+  .hero-card span{font-size:13.5px;line-height:1.38}
+
+  .stats{grid-template-columns:1fr 1fr;padding:0 14px}
+  .stat{padding:19px 9px 21px}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .stat strong{font-size:25px;letter-spacing:-1.3px}
+  .stat span{font-size:13px;line-height:1.35}
+
+  .section{padding:40px 16px 44px;margin-top:12px}
+  .section-head{grid-template-columns:1fr;gap:12px;margin-bottom:25px}
+  .section-title{
+    font-size:clamp(30px,8.8vw,36px);
+    line-height:1.03;
+    letter-spacing:-1.8px;
+  }
+  .section-copy{font-size:15.5px;line-height:1.5;max-width:none}
+  .eyebrow{font-size:11px;line-height:1.3;letter-spacing:.12em;margin-bottom:12px}
+
+  .benefits,.services,.projects,.reviews{grid-template-columns:1fr;gap:12px}
+  .benefit{min-height:0;padding:21px;display:block}
+  .benefit h3{font-size:25px;line-height:1.07;margin:20px 0 8px}
+  .benefit p{font-size:15.5px;line-height:1.48;max-width:none}
+  .benefit strong{font-size:27px;margin-top:14px}
+  .benefit small{font-size:12px}
+  .icon{width:42px;height:42px}
+
+  .projects-head{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:20px}
+  .projects-head .outline{font-size:14px;padding:10px 14px}
+  .project-image{height:auto;aspect-ratio:4 / 3}
+  .project-body{padding:18px}
+  .project h3{font-size:25px;line-height:1.07;letter-spacing:-.6px;margin-bottom:9px}
+  .meta{font-size:13.5px;line-height:1.4;gap:7px}
+  .project-link{font-size:14px;margin-top:15px}
+  .project-link i{width:30px;height:30px}
+
+  .dark-banner#lead{height:530px;margin-top:12px;border-radius:18px}
+  .dark-banner#lead .dark-content{padding:28px 20px;max-width:none;justify-content:flex-start;padding-top:36px}
+  .dark-banner#lead .dark-content h2{font-size:33px;line-height:1.05;letter-spacing:-1.5px;margin-bottom:13px}
+  .dark-banner#lead .dark-content p{font-size:15.5px;line-height:1.5;max-width:none;margin-bottom:20px}
+  .dark-banner#lead .dark-content .btn{font-size:15px;padding:11px 17px}
+  .dark-banner#lead .hero-card{left:14px;right:14px;bottom:14px;width:auto;grid-template-columns:74px minmax(0,1fr);gap:12px;padding:14px}
+  .dark-banner#lead .hero-card img{width:74px;height:74px}
+  .dark-banner#lead .hero-card strong{font-size:15px;line-height:1.26}
+  .dark-banner#lead .hero-card span{font-size:13px;line-height:1.38}
+
+  .service{min-height:0;padding:21px}
+  .service h3{font-size:25px;line-height:1.06;margin:28px 0 8px}
+  .service p{font-size:15.5px;line-height:1.48;max-width:none;padding-right:34px}
+  .service-arrow{right:15px;bottom:15px;width:36px;height:36px}
+
+  .process{grid-template-columns:1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .step{min-height:0;padding:20px 14px;border-right:0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .step:nth-child(-n+3){border-bottom:1px solid var(--line)}
+  .step h3{font-size:24px;line-height:1.06;margin:21px 0 7px}
+  .step p{font-size:15px;line-height:1.48}
+
+  .cases{grid-template-columns:1fr;gap:12px}
+  .case-large{min-height:360px}
+  .case-small{min-height:210px}
+  .case-info{left:18px;right:18px;bottom:18px}
+  .case-info span{font-size:10px}
+  .case-info h3{font-size:26px;line-height:1.03;letter-spacing:-1px;margin:7px 0 8px}
+  .case-info p{font-size:14px;line-height:1.45}
+
+  .materials{grid-template-columns:1fr;gap:22px}
+  .material-photo{height:auto;aspect-ratio:4 / 3}
+  .material{font-size:15px;padding:16px 0}
+
+  .review{min-height:0;padding:21px}
+  .review blockquote{font-size:20px;line-height:1.28;margin:20px 0 18px}
+  .review small{font-size:12px}
+
+  .faq-wrap{grid-template-columns:1fr;gap:18px}
+  details{padding:17px 0}
+  summary{font-size:16px;line-height:1.4}
+  details p{font-size:15px;line-height:1.5;margin-top:10px}
+
+  .calculator{grid-template-columns:1fr;gap:12px}
+  .calc-visual{height:auto;aspect-ratio:4 / 3}
+  .calc-caption{left:20px;right:20px;bottom:20px}
+  .calc-caption h3{font-size:26px}
+  .calc-caption p{font-size:14px;line-height:1.45}
+  .calc-card{padding:20px}
+  .field{margin-bottom:15px}
+  .field input,.field select,.field textarea{min-height:48px;padding:12px 13px;font-size:16px}
+  .calc-card>.btn{width:100%;min-height:48px}
+  .total strong{font-size:30px}
+
+  .contacts{grid-template-columns:1fr;gap:12px}
+  .contact{padding:21px}
+  .contact h3{font-size:28px;line-height:1.05;letter-spacing:-1px;margin-bottom:20px}
+  .contact-row{padding:15px 0}
+  .contact-row a,.contact-row span{font-size:16px}
+  .contact-row small{font-size:12px}
+  .map{min-height:250px}
+
+  #catalog .door-grid{grid-template-columns:1fr;gap:12px}
+  #catalog .door-card{height:auto;align-self:auto}
+  #catalog .door-visual.photo{aspect-ratio:4 / 3;height:auto !important}
+  #catalog .door-visual.photo img{width:100%;height:100% !important;object-fit:contain !important}
+  #catalog .door-card-body{min-height:0;display:block;padding:17px 17px 16px}
+  #catalog .door-card-body h3{font-size:23px;line-height:1.06}
+  #catalog .door-card-body p{font-size:15px;line-height:1.45;margin-bottom:17px}
+  #catalog .door-card-body strong{font-size:17px}
+  #catalog .door-card-body button{font-size:14.5px}
+
+  .door-tabs{gap:6px;margin-bottom:12px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;scrollbar-width:none}
+  .door-tabs::-webkit-scrollbar{display:none}
+  .door-tab{flex:0 0 auto;padding:9px 12px;font-size:13px;min-height:40px}
+  .door-tools{grid-template-columns:1fr;gap:9px;margin-bottom:10px}
+  .door-tools input,.door-tools select{height:46px;font-size:15px;border-radius:11px}
+  .door-count{font-size:14px;margin-bottom:14px}
+
+  .product-modal{padding:8px}
+  .product-modal__box{
+    width:100%;
+    height:min(760px,calc(100vh - 16px));
+    max-height:none;
+    aspect-ratio:auto;
+    grid-template-columns:1fr;
+    grid-template-rows:36% 64%;
+    border-radius:17px;
+  }
+  .product-modal__image img{object-fit:contain;background:#e8e4dc}
+  .product-modal__content{padding:20px 18px 18px}
+  .product-modal__title{font-size:31px;line-height:1.02;letter-spacing:-1.3px}
+  .product-modal__desc{font-size:14.5px;line-height:1.45;margin-bottom:16px}
+  .product-modal__price{font-size:20px;margin-bottom:16px}
+  .product-modal__specs{gap:10px 15px;margin-bottom:16px}
+  .product-modal__spec small{font-size:11px}
+  .product-modal__spec strong{font-size:13px}
+  .product-modal__sizes{gap:7px;margin-bottom:16px}
+  .product-modal__size{padding:9px 11px;font-size:13px}
+  .product-modal__actions{gap:9px}
+  .product-modal__cta{min-height:48px;font-size:15px;padding:11px 16px}
+  .product-modal__note{font-size:11px;line-height:1.35;max-width:none}
+  .product-modal__close{width:40px;height:40px;right:10px;top:10px;font-size:22px}
+
+  .site-modal{padding:8px}
+  .site-modal__box{max-height:calc(100vh - 16px);padding:22px 17px 19px;border-radius:16px}
+  .site-modal__title{font-size:28px;line-height:1.03}
+  .site-modal__text{font-size:15px;line-height:1.5}
+  .site-modal__form input,.site-modal__form textarea{font-size:16px;min-height:48px}
+  .site-modal__submit{min-height:48px;font-size:15px}
+
+  .footer{padding:20px 16px 24px;gap:18px}
+  .footer-links{gap:11px 15px;font-size:14px}
+  .footer-note{font-size:11px}
+  .float{right:10px;bottom:10px;padding:11px 14px;font-size:14px}
+}
+
+@media (max-width:360px){
+  .header{padding:0 11px}
+  .logo{font-size:25px}
+  .logo small{font-size:7px}
+  .header-cta{font-size:11px;padding:9px 10px}
+  .hero{height:590px}
+  .hero-copy{left:17px;right:17px;top:29px}
+  .hero h1{font-size:38px;letter-spacing:-2.25px}
+  .hero p{font-size:15px}
+  .hero-card{grid-template-columns:68px minmax(0,1fr);gap:11px;padding:12px}
+  .hero-card img{width:68px;height:68px}
+  .hero-card strong{font-size:15px}
+  .hero-card span{font-size:12.5px}
+  .section{padding-left:14px;padding-right:14px}
+  .section-title{font-size:29px}
+  .video{white-space:normal}
+  .product-modal__box{grid-template-rows:32% 68%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .door-card,.project,.service,.benefit,.step,.material,.review,.case-large,.case-small,.calc-card,.contact,details,.hero-card{transition:none!important}
+}
+</style>
+
+</head>
+<body>
+<div class="page">
+<section class="panel" id="top">
+<header class="header">
+<a class="logo" href="#top">ЭСТ<small>ДВЕРИ · ПРОДАЖА И УСТАНОВКА</small></a>
+<nav class="nav"><a href="#projects">Каталог дверей</a><a href="#services">Услуги</a><a href="#about">Почему мы</a><a href="#process">Как работаем</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+<a class="header-cta" data-modal-open="" href="#">Получить расчёт</a>
+</header>
+<section class="hero">
+<img alt="Современный интерьер квартиры" class="hero-bg" src="assets/01-hero.jpg"/>
+<div class="hero-shade"></div>
+<div class="hero-copy">
+<div class="eyebrow">ДВЕРИ ПОД КЛЮЧ · МОСКВА</div>
+<h1>Двери, которые подходят вашему дому</h1>
+<p>Подберём дверь под стиль интерьера, размеры проёма и ваш бюджет.<span class="hero-sub-long"> Сделаем замер, соберём полную комплектацию, доставим и аккуратно установим.</span></p>
+<div class="actions"><a class="btn dark" data-modal-open="" href="#">Рассчитать стоимость <span class="dot">→</span></a><a class="video" href="#projects"><span class="play">▶</span> <span class="video-label-long">Смотреть каталог дверей</span><span class="video-label-short">Смотреть каталог</span></a></div>
+</div>
+<div class="hero-card"><img alt="Деталь интерьера квартиры" decoding="async" loading="lazy" src="assets/02-podbor.jpg"/><div><strong>Индивидуальный подход<br/>к каждой квартире</strong><span>Сравним модели, покрытия и фурнитуру и соберём комплект, который подходит именно вашему интерьеру.</span></div></div>
+</section><div class="stats"><div class="stat"><strong>8+</strong><span>лет опыта</span></div><div class="stat"><strong>240+</strong><span>дверей установлено</span></div><div class="stat"><strong>5 лет</strong><span>гарантии на монтаж</span></div><div class="stat"><strong>100%</strong><span>стоимость согласована заранее</span></div></div>
+</section>
+
+<section class="panel section catalog-enhanced" id="catalog">
+<div class="section-head">
+<div><div class="eyebrow">Каталог</div><h2 class="section-title">Выберите дверь<br/>под ваш интерьер</h2></div>
+<p class="section-copy">Сравнивайте модели по категории, стилю и цене. Итоговую комплектацию рассчитаем после замера.</p>
+</div>
+<div class="door-tabs" id="doorTabs">
+<button class="door-tab active" data-cat="all" type="button">Все двери</button>
+<button class="door-tab" data-cat="interior" type="button">Межкомнатные</button>
+<button class="door-tab" data-cat="entrance" type="button">Входные</button>
+<button class="door-tab" data-cat="hidden" type="button">Скрытые</button>
+<button class="door-tab" data-cat="glass" type="button">Со стеклом</button>
+</div>
+<div class="door-tools">
+<input aria-label="Поиск по каталогу" id="doorSearch" placeholder="Поиск по каталогу..." type="search"/>
+<select aria-label="Сортировка" id="doorSort">
+<option value="default">По популярности</option>
+<option value="asc">Цена: сначала ниже</option>
+<option value="desc">Цена: сначала выше</option>
+</select>
+</div>
+<p class="door-count" id="doorCount">Показано 6 моделей</p>
+<div class="door-grid" id="doorGrid">
+<article class="door-card" data-cat="interior" data-name="Linea" data-price="24900">
+<div class="door-visual light photo"><img src="assets/05-linea-l01.jpg" alt="Дверь для интерьера" loading="lazy" decoding="async"></div><div class="door-card-body"><h3>Linea</h3><p>Межкомнатная · эмаль · минимализм</p><div><strong>от 24 900 ₽</strong><button class="door-details" data-product="Linea" type="button">Подробнее →</button></div></div>
+</article>
+<article class="door-card" data-cat="interior" data-name="Forma" data-price="31900">
+<div class="door-visual photo"><img src="assets/07-grand-g07.jpg" alt="Дверь для интерьера" loading="lazy" decoding="async"></div><div class="door-card-body"><h3>Forma</h3><p>Межкомнатная · шпон · современная классика</p><div><strong>от 31 900 ₽</strong><button class="door-details" data-product="Forma" type="button">Подробнее →</button></div></div>
+</article>
+<article class="door-card" data-cat="entrance" data-name="Guard" data-price="64900">
+<div class="door-visual dark photo"><img src="assets/06-frame-f02.jpg" alt="Дверь для интерьера" loading="lazy" decoding="async"></div><div class="door-card-body"><h3>Guard</h3><p>Входная · сталь · современный стиль</p><div><strong>от 64 900 ₽</strong><button class="door-details" data-product="Guard" type="button">Подробнее →</button></div></div>
+</article>
+<article class="door-card" data-cat="hidden" data-name="Invisible" data-price="45900">
+<div class="door-visual light photo"><img src="assets/08-linea-l01-detail.jpg" alt="Дверь для интерьера" loading="lazy" decoding="async"></div><div class="door-card-body"><h3>Invisible</h3><p>Скрытая · под покраску · минимализм</p><div><strong>от 45 900 ₽</strong><button class="door-details" data-product="Invisible" type="button">Подробнее →</button></div></div>
+</article>
+<article class="door-card" data-cat="glass" data-name="Frame Glass" data-price="42900">
+<div class="door-visual photo"><img src="assets/04-interior.jpg" alt="Дверь для интерьера" loading="lazy" decoding="async"></div><div class="door-card-body"><h3>Frame Glass</h3><p>Со стеклом · алюминий · современный стиль</p><div><strong>от 42 900 ₽</strong><button class="door-details" data-product="Frame Glass" type="button">Подробнее →</button></div></div>
+</article>
+<article class="door-card" data-cat="interior" data-name="Axis" data-price="39900">
+<div class="door-visual light photo"><img src="assets/02-podbor.jpg" alt="Дверь для интерьера" loading="lazy" decoding="async"></div><div class="door-card-body"><h3>Axis</h3><p>Межкомнатная · эмаль · современный стиль</p><div><strong>от 39 900 ₽</strong><button class="door-details" data-product="Axis" type="button">Подробнее →</button></div></div>
+</article>
+</div>
+</section>
+<section class="panel section" id="about">
+<div class="section-head"><div><div class="eyebrow">Почему нас выбирают</div><h2 class="section-title">Подберём. Привезём. Установим.</h2></div><p class="section-copy">Не просто продаём двери — собираем готовое решение под ваш проём и интерьер. От первого замера до монтажа за результат отвечает одна команда.</p></div>
+<div class="benefits">
+<article class="benefit"><div class="icon">◈</div><div><h3>Точный замер</h3><p>Проверяем проём, толщину стены, уровень пола и другие условия до оформления заказа.</p><strong>8+</strong><small>лет устанавливаем двери</small></div></article>
+<article class="benefit"><div class="icon">⌘</div><div><h3>Полная комплектация</h3><p>Подберём полотно, коробку, наличники, петли, ручки и другие элементы так, чтобы всё сочеталось и подходило друг к другу.</p><strong>240+</strong><small>дверей установлено</small></div></article>
+<article class="benefit"><div class="icon">□</div><div><h3>Доставка к монтажу</h3><p>Согласуем доставку и монтаж по одной дате, чтобы двери не мешали ремонту и не занимали место дома.</p><strong>0</strong><small>не теряем на согласованиях</small></div></article>
+<article class="benefit"><div class="icon">◌</div><div><h3>Аккуратный монтаж</h3><p>Устанавливаем дверь по технологии, регулируем полотно и фурнитуру и оставляем рабочее место в порядке.</p><strong>100%</strong><small>задач закрываем одной командой</small></div></article>
+</div>
+</section>
+<section class="panel section section--visual" id="projects">
+<div class="projects-head"><div><div class="eyebrow">Избранные проекты</div><h2 class="section-title">Двери для разных интерьеров</h2></div><a class="outline" data-modal-open="" href="#">Смотреть каталог →</a></div>
+<div class="projects">
+<article class="project"><div class="project-image"><img alt="Скрытые двери в современном интерьере" decoding="async" loading="lazy" src="assets/10-project-modern.jpg"/></div><div class="project-body"><h3>Скрытая дверь в современном интерьере</h3><div class="meta"><span>скрытый короб</span><span>•</span><span>высокое полотно</span><span>•</span><span>минималистичный дизайн</span></div><a class="project-link" data-modal-open="" href="#">Подробнее о проекте <i>→</i></a></div></article>
+<article class="project"><div class="project-image"><img alt="Классические двери с фрезеровкой" decoding="async" loading="lazy" src="assets/11-project-house.jpg"/></div><div class="project-body"><h3>Классические двери с фрезеровкой</h3><div class="meta"><span>эмаль</span><span>•</span><span>комплект на всю квартиру</span><span>•</span><span>классический стиль</span></div><a class="project-link" data-modal-open="" href="#">Подробнее о проекте <i>→</i></a></div></article>
+<article class="project"><div class="project-image"><img alt="Стеклянная дверь для гостиной" decoding="async" loading="lazy" src="assets/12-project-light.jpg"/></div><div class="project-body"><h3>Стеклянная дверь для гостиной</h3><div class="meta"><span>матовое стекло</span><span>•</span><span>раздвижная система</span><span>•</span><span>светлый интерьер</span></div><a class="project-link" data-modal-open="" href="#">Подробнее о проекте <i>→</i></a></div></article>
+</div>
+</section>
+<section class="dark-banner" id="lead"><img alt="Премиальный интерьер" decoding="async" loading="lazy" src="assets/03-montazh.jpg"/><div class="dark-content"><div class="eyebrow">Ваш будущий интерьер</div><h2>Подберём двери под ваш интерьер</h2><p>Оставьте заявку — уточним количество дверей, размеры и пожелания, предложим подходящие модели и посчитаем комплект вместе с установкой.</p><a class="btn" data-modal-open="" href="#">Получить расчёт <span class="dot">→</span></a></div></section>
+<section class="panel section section--grid" id="services">
+<div class="section-head"><div><div class="eyebrow">Наши услуги</div><h2 class="section-title">Продажа и установка дверей</h2></div><p class="section-copy">Закрываем весь цикл: помогаем выбрать дверь, делаем замер, комплектуем, доставляем, при необходимости демонтируем старую дверь и устанавливаем новую.</p></div>
+<div class="services">
+<article class="service"><span class="service-no">01</span><h3>Межкомнатные двери</h3><p>Экошпон, CPL, эмаль, натуральный шпон и массив — подберём вариант по стилю, сроку службы и бюджету.</p><span class="service-arrow">→</span></article>
+<article class="service"><span class="service-no">02</span><h3>Скрытые двери</h3><p>Двери вровень со стеной со скрытым коробом — для минималистичных и современных интерьеров.</p><span class="service-arrow">→</span></article>
+<article class="service"><span class="service-no">03</span><h3>Входные двери</h3><p>Входные двери для квартиры с подходящей тепло-, шумоизоляцией, замками и профессиональной установкой.</p><span class="service-arrow">→</span></article>
+<article class="service"><span class="service-no">04</span><h3>Двери со стеклом</h3><p>Прозрачное, сатинированное или матовое стекло — больше света и визуально легче пространство.</p><span class="service-arrow">→</span></article>
+<article class="service"><span class="service-no">05</span><h3>Раздвижные двери</h3><p>Раздвижные системы для гардеробных, кабинетов, проходных зон и помещений, где важно экономить место.</p><span class="service-arrow">→</span></article>
+<article class="service"><span class="service-no">06</span><h3>Фурнитура и комплектация</h3><p>Ручки, петли, замки, доводчики, наличники и доборы — собираем совместимый комплект в одном стиле.</p><span class="service-arrow">→</span></article>
+</div>
+</section>
+<section class="panel section section--steps" id="process">
+<div class="section-head"><div><div class="eyebrow">Как мы работаем</div><h2 class="section-title">Понятный путь от выбора до установки</h2></div><p class="section-copy">Сначала разбираемся с задачей и проёмами, затем выбираем модель и комплектацию. После согласования доставляем и устанавливаем двери.</p></div>
+<div class="process">
+<div class="step"><b>01</b><h3>Заявка</h3><p>Уточняем количество проёмов, желаемый стиль, бюджет и сроки.</p></div><div class="step"><b>02</b><h3>Замер</h3><p>Проверяем размеры проёмов, стены, пол и особенности будущего монтажа.</p></div><div class="step"><b>03</b><h3>Подбор</h3><p>Показываем подходящие модели и считаем полный комплект: полотно, короб, фурнитура и монтаж.</p></div><div class="step"><b>04</b><h3>Согласование</h3><p>Фиксируем модели, комплектацию, итоговую стоимость и дату установки.</p></div><div class="step"><b>05</b><h3>Доставка</h3><p>Привозим двери и комплектующие к согласованной дате, без лишних перемещений по объекту.</p></div><div class="step"><b>06</b><h3>Монтаж</h3><p>Устанавливаем, регулируем, проверяем работу двери и сдаём готовый результат.</p></div>
+</div>
+</section>
+<section class="panel section section--cases">
+<div class="section-head"><div><div class="eyebrow">Кейсы</div><h2 class="section-title">Реальные интерьеры.<br/>Реальные результаты.</h2></div><p class="section-copy">Показываем, как разные модели выглядят в готовом интерьере: скрытые, классические, стеклянные и раздвижные двери.</p></div>
+<div class="cases">
+<article class="case-large"><img alt="Реализованный интерьер" decoding="async" loading="lazy" src="assets/10-project-modern.jpg"/><div class="case-info"><span>Москва · скрытая дверь · установка под ключ</span><h3>Скрытая дверь в эмали</h3><p>Полотно в цвет стены, скрытый короб и лаконичная фурнитура без лишних деталей.</p></div></article>
+<div class="case-stack"><article class="case-small"><img alt="Гостиная" decoding="async" loading="lazy" src="assets/11-project-house.jpg"/><div class="case-info"><span>Москва · 3 двери · комплект</span><h3>Шпонированные двери</h3><p>Натуральная фактура шпона и фурнитура, подобранная под интерьер.</p></div></article><article class="case-small"><img alt="Интерьер" decoding="async" loading="lazy" src="assets/12-project-light.jpg"/><div class="case-info"><span>Москва · стекло · раздвижная система</span><h3>Стеклянная раздвижная дверь</h3><p>Матовое стекло, аккуратная раздвижная система и больше света между комнатами.</p></div></article></div>
+</div>
+</section>
+<section class="panel section section--materials">
+<div class="section-head"><div><div class="eyebrow">Материалы и комплектация</div><h2 class="section-title">Подбираем материалы<br/>без лишней суеты</h2></div><p class="section-copy">Помогаем выбрать покрытие под интерьер и собрать совместимый комплект — от полотна до ручки и наличников.</p></div>
+<div class="materials"><div class="material-photo"><img alt="Интерьер с натуральными материалами" decoding="async" loading="lazy" src="assets/04-interior.jpg"/></div><div class="material-list"><div class="material"><span>Экошпон и CPL</span><span>01</span></div><div class="material"><span>Эмаль</span><span>02</span></div><div class="material"><span>Натуральный шпон</span><span>03</span></div><div class="material"><span>Массив дерева</span><span>04</span></div><div class="material"><span>Стекло</span><span>05</span></div><div class="material"><span>Фурнитура</span><span>06</span></div></div></div>
+</section>
+<section class="panel section section--reviews" id="reviews">
+<div class="section-head"><div><div class="eyebrow">Отзывы клиентов</div><h2 class="section-title">Отзывы клиентов</h2></div><p class="section-copy">Важно, чтобы весь заказ прошёл спокойно: точный замер, понятная смета, согласованная доставка и аккуратный монтаж.</p></div>
+<div class="reviews"><article class="review"><div class="stars">★★★★★</div><blockquote>«Доставка получился именно таким, каким мы его представляли. Особенно понравилась организованность команды.»</blockquote><small>Анна · 4 двери</small></article><article class="review"><div class="stars">★★★★★</div><blockquote>«Подбор была понятной с самого начала, а все изменения обсуждались заранее. Ни одного неприятного сюрприза.»</blockquote><small>Илья · 6 дверей</small></article><article class="review"><div class="stars">★★★★★</div><blockquote>«Мы почти не приезжали на объект. Получали отчёты и получили готовую квартиру в срок.»</blockquote><small>Мария · 3 двери</small></article></div>
+</section>
+<section class="panel section section--faq">
+<div class="faq-wrap"><div><div class="eyebrow">Частые вопросы</div><h2 class="section-title">Ответы до начала<br/>ремонта</h2></div><div class="faq"><details><summary>Сколько занимает установка двери?</summary><p>Обычно установка одной стандартной межкомнатной двери занимает несколько часов. Точное время зависит от проёма и выбранной системы.</p></details><details><summary>Можно ли подобрать двери по фото интерьера?</summary><p>Да. Пришлите фото или дизайн-проект — подберём несколько вариантов по стилю, цвету и бюджету.</p></details><details><summary>Что входит в стоимость?</summary><p>Дверное полотно, короб, наличники, фурнитура и монтаж — состав зависит от выбранной комплектации. Все позиции считаем заранее.</p></details><details><summary>Вы сами выбираете и покупаете дверь?</summary><p>Можем организовать весь заказ сами: подобрать комплект, оформить поставку и привезти всё к монтажу.</p></details><details><summary>Есть ли гарантия на монтаж?</summary><p>Да, гарантийные условия на дверь и монтаж фиксируются в договоре.</p></details></div></div>
+</section>
+<section class="panel section section--calculator" id="calculator">
+<div class="section-head"><div><div class="eyebrow">Стоимость</div><h2 class="section-title">Рассчитаем бюджет<br/>вашего ремонта</h2></div><p class="section-copy">Укажите количество и тип дверей — получите ориентировочный расчёт комплекта и установки.</p></div>
+<div class="calculator"><div class="calc-visual"><img alt="Современный интерьер" decoding="async" loading="lazy" src="assets/09-zamer.jpg"/><div class="calc-caption"><h3>Поймите бюджет до замера</h3><p>Ориентировочный расчёт помогает заранее понять бюджет и выбрать комплектацию без лишних позиций.</p></div></div><div class="calc-card"><div class="field"><label>Количество дверей</label><input id="doors" max="20" min="1" placeholder="4" type="number" value="4"/></div><div class="field"><label>Тип двери</label><select id="repair"><option value="35000">Межкомнатные двери</option><option value="50000">Скрытые двери</option><option value="65000">Входная дверь</option></select></div><div class="total"><small>Ориентировочная стоимость</small><strong aria-live="polite" id="total">2 275 000 ₽</strong></div><a class="btn dark" data-modal-open="" href="#">Получить точный расчёт →<span class="dot">→</span></a></div></div>
+</section>
+<section class="panel section" id="contacts">
+<div class="contacts"><div class="contact"><div class="eyebrow">Контакты</div><h3>Подберём двери под вашу задачу.</h3><div class="contact-row"><small>Телефон</small><a href="tel:+79990000000">+7 999 000-00-00</a></div><div class="contact-row"><small>Мессенджер</small><span>Telegram · @est_doors</span></div><div class="contact-row"><small>Шоурум</small><span>Москва, ул. Примерная, 12</span></div><div class="actions contact-actions"><a class="btn dark" data-modal-open="" href="#">Получить консультацию →<span class="dot">→</span></a></div></div><div class="map"><div class="map-label">Шоурум ЭСТ · Москва</div></div></div>
+</section>
+<footer class="panel footer"><div><div class="footer-brand">ЭСТ</div><div class="footer-brand"><small>ДВЕРИ · ПРОДАЖА И УСТАНОВКА</small></div></div><div class="footer-links"><a href="#projects">Каталог дверей</a><a href="#services">Услуги</a><a href="#about">Почему мы</a><a href="#contacts">Контакты</a></div><div class="footer-note">© 2026 ЭСТ · Все права защищены</div></footer>
+</div>
+<button class="float" data-modal-open="" type="button">Получить расчёт</button>
+
+<div aria-hidden="true" class="product-modal" id="productModal">
+  <div aria-labelledby="productModalTitle" aria-modal="true" class="product-modal__box" role="dialog">
+    <button aria-label="Закрыть карточку товара" class="product-modal__close" id="productModalClose" type="button">×</button>
+    <div class="product-modal__image"><img id="productModalImage" src="assets/05-linea-l01.jpg" alt="" /></div>
+    <div class="product-modal__content">
+      <div class="product-modal__eyebrow" id="productModalEyebrow">ЭСТ · каталог</div>
+      <h2 class="product-modal__title" id="productModalTitle">Linea</h2>
+      <p class="product-modal__desc" id="productModalDesc"></p>
+      <div class="product-modal__price" id="productModalPrice"></div>
+      <div class="product-modal__specs">
+        <div class="product-modal__spec"><small>Покрытие</small><strong id="productModalFinish"></strong></div>
+        <div class="product-modal__spec"><small>Стиль</small><strong id="productModalStyle"></strong></div>
+      </div>
+      <div class="product-modal__label">Выберите размер</div>
+      <div class="product-modal__sizes" id="productModalSizes"></div>
+      <div class="product-modal__actions">
+        <button class="product-modal__cta" id="productModalCta" type="button">Получить расчёт для этой двери →</button>
+        <div class="product-modal__note">Точную стоимость комплекта определим после замера и выбора фурнитуры.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div aria-hidden="true" class="site-modal" id="siteModal">
+<div aria-labelledby="siteModalTitle" aria-modal="true" class="site-modal__box" role="dialog">
+<button aria-label="Закрыть" class="site-modal__close" title="Закрыть" type="button">×</button>
+<div class="site-modal__eyebrow">ЭСТ · консультация</div>
+<h2 class="site-modal__title" id="siteModalTitle">Обсудим ваш заказ</h2>
+<p class="site-modal__text">Оставьте контакты. Свяжемся с вами, уточним количество дверей, пожелания и предложим подходящие модели.</p>
+<form class="site-modal__form" id="siteForm">
+<label class="sr-only" for="leadName">Ваше имя</label><input autocomplete="name" id="leadName" name="name" placeholder="Ваше имя" required="" type="text"/>
+<label class="sr-only" for="leadPhone">Телефон</label><input autocomplete="tel" id="leadPhone" name="phone" placeholder="Телефон" required="" type="tel"/>
+<label class="sr-only" for="leadMessage">Что нужно подобрать</label><textarea id="leadMessage" name="message" placeholder="Какие двери нужны: количество, стиль, размеры или фото"></textarea>
+<button class="site-modal__submit" type="submit">Отправить заявку →</button>
+</form>
+</div>
+</div>
+
+<script>
+(() => {
+  const modal = document.getElementById('productModal');
+  if (!modal) return;
+  const box = modal.querySelector('.product-modal__box');
+  const close = document.getElementById('productModalClose');
+  const image = document.getElementById('productModalImage');
+  const title = document.getElementById('productModalTitle');
+  const eyebrow = document.getElementById('productModalEyebrow');
+  const desc = document.getElementById('productModalDesc');
+  const price = document.getElementById('productModalPrice');
+  const finish = document.getElementById('productModalFinish');
+  const style = document.getElementById('productModalStyle');
+  const sizes = document.getElementById('productModalSizes');
+  const cta = document.getElementById('productModalCta');
+  let lastTrigger = null;
+  let selectedSize = '';
+  const products = {
+    'Linea': {cat:'Межкомнатная', image:'assets/05-linea-l01.jpg', price:'от 24 900 ₽', desc:'Эмалевое полотно с чистой геометрией для спокойных современных интерьеров.', finish:'Эмаль', style:'Минимализм', sizes:['600 × 2000 мм','700 × 2000 мм','800 × 2000 мм','900 × 2000 мм','под заказ']},
+    'Forma': {cat:'Межкомнатная', image:'assets/07-grand-g07.jpg', price:'от 31 900 ₽', desc:'Тёплая фактура шпона и сдержанная форма — решение для современных и классических интерьеров.', finish:'Шпон', style:'Современная классика', sizes:['600 × 2000 мм','700 × 2000 мм','800 × 2000 мм','900 × 2000 мм','под заказ']},
+    'Guard': {cat:'Входная', image:'assets/06-frame-f02.jpg', price:'от 64 900 ₽', desc:'Надёжная входная дверь в современном исполнении. Комплектацию и фурнитуру подбираем под объект.', finish:'Сталь', style:'Современный стиль', sizes:['860 × 2050 мм','960 × 2050 мм','под заказ']},
+    'Invisible': {cat:'Скрытая', image:'assets/08-linea-l01-detail.jpg', price:'от 45 900 ₽', desc:'Скрытая система с полотном под покраску — чтобы дверь визуально растворялась в стене.', finish:'Под покраску', style:'Минимализм', sizes:['600 × 2000 мм','700 × 2000 мм','800 × 2000 мм','900 × 2000 мм','под заказ']},
+    'Frame Glass': {cat:'Со стеклом', image:'assets/04-interior.jpg', price:'от 42 900 ₽', desc:'Лёгкая современная модель со стеклом для помещений, где важно сохранить свет и визуальную связь между зонами.', finish:'Алюминий + стекло', style:'Современный стиль', sizes:['600 × 2000 мм','700 × 2000 мм','800 × 2000 мм','900 × 2000 мм','под заказ']},
+    'Axis': {cat:'Межкомнатная', image:'assets/02-podbor.jpg', price:'от 39 900 ₽', desc:'Лаконичная межкомнатная дверь для современных проектов. Можно собрать комплект под весь объект.', finish:'Эмаль', style:'Современный стиль', sizes:['600 × 2000 мм','700 × 2000 мм','800 × 2000 мм','900 × 2000 мм','под заказ']}
+  };
+  function openProduct(name, trigger){
+    const product=products[name]; if(!product) return;
+    lastTrigger=trigger||null; selectedSize=product.sizes[0];
+    eyebrow.textContent='ЭСТ · каталог · '+product.cat;
+    title.textContent=name; desc.textContent=product.desc; price.textContent=product.price;
+    finish.textContent=product.finish; style.textContent=product.style;
+    image.src=product.image; image.alt='Дверь '+name;
+    sizes.innerHTML=product.sizes.map((size,i)=>`<button class="product-modal__size${i===0?' active':''}" type="button" data-size="${size}">${size}</button>`).join('');
+    sizes.querySelectorAll('[data-size]').forEach(btn=>btn.addEventListener('click',()=>{
+      selectedSize=btn.dataset.size; sizes.querySelectorAll('[data-size]').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+    }));
+    modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.classList.add('modal-open');
+    setTimeout(()=>close?.focus(),30);
+  }
+  function closeProduct(){
+    modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.classList.remove('modal-open');
+    if(lastTrigger?.focus) lastTrigger.focus();
+  }
+  document.querySelectorAll('.door-details').forEach(btn=>btn.addEventListener('click',()=>openProduct(btn.dataset.product,btn)));
+  close?.addEventListener('click',closeProduct);
+  modal.addEventListener('click',e=>{if(e.target===modal) closeProduct();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open')) closeProduct();});
+  cta?.addEventListener('click',()=>{
+    const productName=title.textContent;
+    const message=`Интересует дверь ${productName}, размер: ${selectedSize}.`;
+    closeProduct();
+    const lead=document.getElementById('siteModal');
+    const textarea=document.getElementById('leadMessage');
+    if(lead){lead.classList.add('open'); lead.setAttribute('aria-hidden','false'); document.body.classList.add('modal-open'); if(textarea) textarea.value=message; setTimeout(()=>document.getElementById('leadName')?.focus(),30);}
+  });
+})();
+</script>
+<script>
+(() => {
+  const doors = document.getElementById('doors');
+  const repair = document.getElementById('repair');
+  const total = document.getElementById('total');
+  const modal = document.getElementById('siteModal');
+  const form = document.getElementById('siteForm');
+
+  if (doors && repair && total) {
+    const calc = () => {
+      const count = Math.max(0, Number(doors.value) || 0);
+      const rate = Math.max(0, Number(repair.value) || 0);
+      total.textContent = (count * rate).toLocaleString('ru-RU') + ' ₽';
+    };
+    doors.addEventListener('input', calc);
+    repair.addEventListener('change', calc);
+    calc();
+  }
+
+  if (!modal) return;
+
+  const closeButton = modal.querySelector('.site-modal__close');
+  const firstInput = modal.querySelector('input');
+  let lastTrigger = null;
+
+  const openModal = (event) => {
+    if (event) event.preventDefault();
+    lastTrigger = event?.currentTarget || document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    setTimeout(() => firstInput?.focus(), 30);
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (lastTrigger && typeof lastTrigger.focus === 'function') lastTrigger.focus();
+  };
+
+  document.querySelectorAll('[data-modal-open]').forEach(el => {
+    el.addEventListener('click', openModal);
+  });
+
+  closeButton?.addEventListener('click', closeModal);
+  modal.addEventListener('click', event => {
+    if (event.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+
+  form?.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    form.innerHTML = '<div class="modal-success"><strong>Спасибо. Заявка принята.</strong><span>Мы свяжемся с вами в ближайшее время.</span></div>';
+  });
+})();
+</script>
+<style>
+/* === FINAL VISUAL HIERARCHY PASS === */
+:root{--space-section:78px;--space-section-bottom:82px}
+body{font-size:17px;line-height:1.55}
+.header{min-height:86px}
+.logo{font-size:34px}
+.nav{font-size:15px}
+.header-cta{font-size:15px;padding:14px 22px}
+.hero-copy{top:76px;max-width:760px}
+.hero h1{font-size:clamp(64px,5.1vw,72px);line-height:.94;letter-spacing:-4px;font-weight:500;margin-bottom:24px}
+.hero p{font-size:18px;line-height:1.55;max-width:570px;margin-bottom:28px}
+.eyebrow{font-size:13px;line-height:1.4;margin-bottom:18px}
+.section-head{gap:76px;margin-bottom:44px}
+.section-title{font-size:clamp(46px,3.8vw,52px);line-height:.99;letter-spacing:-2.7px;font-weight:500}
+.section-copy{font-size:17px;line-height:1.6;max-width:560px}
+.benefits,.services,.projects,.reviews{gap:18px}
+.benefit{min-height:255px;padding:29px}
+.benefit h3{font-size:30px;line-height:1.05;letter-spacing:-1px;font-weight:500;margin:25px 0 11px}
+.benefit p{font-size:17px;line-height:1.55;max-width:330px}
+.benefit strong{font-size:30px}
+.projects-head{margin-bottom:30px}
+.projects-head .section-title{max-width:850px}
+.project-image{height:340px}
+.project-body{padding:23px}
+.project h3{font-size:30px;line-height:1.08;letter-spacing:-.8px;font-weight:500;margin-bottom:11px}
+.meta{font-size:15px}
+.project-link{font-size:15px;margin-top:19px}
+.dark-banner{height:350px}
+.dark-content{padding:44px 50px}
+.dark-content h2{font-size:clamp(46px,3.8vw,52px);line-height:.99;letter-spacing:-2.7px;font-weight:500;margin-bottom:17px}
+.dark-content p{font-size:17px;line-height:1.58;max-width:560px;margin-bottom:25px}
+.services{grid-template-columns:repeat(3,1fr)}
+.service{min-height:240px;padding:28px}
+.service-no{font-size:13px}
+.service h3{font-size:29px;line-height:1.05;letter-spacing:-.7px;font-weight:500;margin:35px 0 11px}
+.service p{font-size:17px;line-height:1.55;max-width:330px}
+.process{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.step{min-height:215px;padding:27px 20px}
+.step b{font-size:13px}
+.step h3{font-size:25px;line-height:1.08;letter-spacing:-.5px;font-weight:500;margin:38px 0 11px}
+.step p{font-size:16px;line-height:1.55}
+.case-info{left:28px;right:28px;bottom:28px}
+.case-info span{font-size:13px}
+.case-info h3{font-size:32px;line-height:1.02;font-weight:500;margin:9px 0 10px}
+.case-info p{font-size:16px;line-height:1.5}
+.materials{gap:70px}
+.material{font-size:17px;padding:22px 0}
+.reviews{grid-template-columns:repeat(3,1fr)}
+.review{min-height:275px;padding:29px}
+.review blockquote{font-size:24px;line-height:1.3;margin:27px 0 auto}
+.review small{font-size:13px}
+.faq-wrap{gap:80px}
+details{padding:23px 0}
+summary{font-size:18px;line-height:1.45}
+details p{font-size:16px;line-height:1.6}
+.calculator{gap:22px}
+.calc-card{padding:30px}
+.calc-caption h3{font-size:30px}
+.calc-caption p{font-size:17px}
+.contact{padding:31px}
+.contact h3{font-size:32px}
+.contact-row a,.contact-row span{font-size:18px}
+.footer{padding:30px 40px 35px}
+.footer-links{font-size:15px}
+
+@media(max-width:1150px){
+  .section-head{gap:18px;margin-bottom:38px}
+  .section-copy{max-width:680px}
+  .benefits,.services,.projects,.reviews{gap:16px}
+}
+@media(max-width:700px){
+  body{font-size:16px}
+  .header{min-height:68px}
+  .hero-copy{top:42px;max-width:none}
+  .hero h1{font-size:44px;line-height:.96;letter-spacing:-2.8px;margin-bottom:18px}
+  .hero p{font-size:16px;line-height:1.52;margin-bottom:23px}
+  .eyebrow{font-size:12px;margin-bottom:14px}
+  .section{padding:48px 17px 52px}
+  .section-head{gap:14px;margin-bottom:30px}
+  .section-title{font-size:34px;line-height:1.02;letter-spacing:-2px}
+  .section-copy{font-size:16px;line-height:1.55}
+  .benefit{min-height:225px;padding:25px}
+  .benefit h3{font-size:27px;margin:23px 0 9px}
+  .benefit p{font-size:16px;line-height:1.52}
+  .benefit strong{font-size:28px}
+  .project-image{height:270px}
+  .project-body{padding:20px}
+  .project h3{font-size:27px}
+  .meta{font-size:14px}
+  .dark-banner{height:390px}
+  .dark-content{padding:31px 22px}
+  .dark-content h2{font-size:34px;line-height:1.04;letter-spacing:-1.7px}
+  .dark-content p{font-size:16px;line-height:1.55}
+  .service{min-height:220px;padding:24px}
+  .service h3{font-size:27px;margin:31px 0 9px}
+  .service p{font-size:16px;line-height:1.52}
+  .step{min-height:0;padding:23px 15px}
+  .step h3{font-size:25px;margin:23px 0 8px}
+  .step p{font-size:16px}
+  .case-info{left:22px;right:22px;bottom:22px}
+  .case-info h3{font-size:28px}
+  .case-info p{font-size:15px}
+  .material{font-size:16px}
+  .review{min-height:240px;padding:24px}
+  .review blockquote{font-size:21px;line-height:1.3;margin:23px 0 auto}
+  summary{font-size:17px}
+  details p{font-size:16px}
+  .calc-card{padding:22px}
+  .contact{padding:24px}
+}
+</style>
+<script>
+(() => {
+  'use strict';
+
+  const plural = (n, forms) => {
+    const a = Math.abs(n) % 100, b = a % 10;
+    if (a > 10 && a < 20) return forms[2];
+    if (b > 1 && b < 5) return forms[1];
+    if (b === 1) return forms[0];
+    return forms[2];
+  };
+
+  /* Catalog: filters, search and sorting */
+  const grid = document.getElementById('doorGrid');
+  const search = document.getElementById('doorSearch');
+  const sort = document.getElementById('doorSort');
+  const count = document.getElementById('doorCount');
+  const tabs = [...document.querySelectorAll('.door-tab')];
+
+  if (grid && search && sort && count) {
+    let cat = 'all';
+
+    function applyCatalog() {
+      const q = (search.value || '').toLowerCase().trim();
+      const cards = [...grid.querySelectorAll('.door-card')];
+
+      cards.sort((a,b) => {
+        const pa = +a.dataset.price, pb = +b.dataset.price;
+        if (sort.value === 'asc') return pa - pb;
+        if (sort.value === 'desc') return pb - pa;
+        return 0;
+      }).forEach(card => grid.appendChild(card));
+
+      let visible = 0;
+      cards.forEach(card => {
+        const okCat = cat === 'all' || card.dataset.cat === cat;
+        const okQuery = !q || (card.dataset.name + ' ' + card.textContent).toLowerCase().includes(q);
+        const show = okCat && okQuery;
+        card.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+
+      count.textContent = 'Показано ' + visible + ' ' + plural(visible, ['модель','модели','моделей']);
+
+      cards.forEach((card, i) => {
+        if (!card.classList.contains('hidden')) {
+          card.style.transitionDelay = `${Math.min((i % 3) * 70, 140)}ms`;
+          card.classList.remove('is-visible');
+          requestAnimationFrame(() => requestAnimationFrame(() => card.classList.add('is-visible')));
+        }
+      });
+    }
+
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(x => x.classList.remove('active'));
+      tab.classList.add('active');
+      cat = tab.dataset.cat || 'all';
+      applyCatalog();
+    }));
+    search.addEventListener('input', applyCatalog);
+    sort.addEventListener('change', applyCatalog);
+    applyCatalog();
+  }
+
+  /* Scroll reveal */
+  document.documentElement.classList.add('motion-ready');
+
+  const revealTargets = [
+    ...document.querySelectorAll('.section-head, .section-copy, .proof-grid article, .service, .benefit, .project, .step, .material, .review, .case, .door-card, .showroom-grid, .faq, .calculator, .dark-banner, .contact-block, .footer')
+  ];
+
+  const reveal = (el, delay=0) => {
+    el.style.transitionDelay = `${delay}ms`;
+    el.classList.add('reveal');
+  };
+
+  revealTargets.forEach((el, i) => {
+    if (!el.classList.contains('door-card') && !el.classList.contains('service') && !el.classList.contains('benefit') && !el.classList.contains('project') && !el.classList.contains('step') && !el.classList.contains('material') && !el.classList.contains('review') && !el.classList.contains('case')) {
+      reveal(el, 0);
+    }
+  });
+
+  document.querySelectorAll('.hero .hero-copy, .hero .hero-bottom').forEach((el, i) => {
+    el.classList.add('is-visible');
+  });
+
+  const cards = document.querySelectorAll('.service,.benefit,.project,.step,.material,.review,.case');
+  cards.forEach((el,i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = `${Math.min((i % 4) * 80, 240)}ms`;
+  });
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.08, rootMargin:'0px 0px -30px'});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+})();
+</script>
+
+<style>
+/* === FINAL HERO + UNIVERSAL CARD MOTION FIX === */
+.hero-copy{left:48px;right:auto;width:min(760px,calc(100% - 96px));max-width:none}
+.hero .btn.dark{color:#fff !important;background:#202020 !important;border-color:#202020 !important;text-shadow:none}
+.hero .btn.dark .dot{color:#222 !important}
+
+/* карточки должны читаться отдельными объектами, а не сливаться с фоном */
+.benefit,.project,.service,.step,.material,.review,.door-card,.case-large,.case-small,.calc-card,.contact,.hero-card,details{
+  box-shadow:0 10px 30px rgba(32,32,32,.07);
+  border-color:rgba(32,32,32,.10);
+}
+.benefit,.project,.service,.step,.review,.door-card,.case-large,.case-small,.calc-card,.contact,.hero-card,details{
+  transition:transform .55s cubic-bezier(.22,1,.36,1),box-shadow .35s ease,border-color .3s ease,opacity .65s ease;
+}
+.benefit:hover,.project:hover,.service:hover,.step:hover,.review:hover,.door-card:hover,.case-large:hover,.case-small:hover,.calc-card:hover,.contact:hover,.hero-card:hover,details:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 42px rgba(32,32,32,.12);
+  border-color:rgba(32,32,32,.16);
+}
+
+/* исправляем сломанный translate(-50%) у hero */
+.motion-ready .hero .hero-copy{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .8s var(--ease),transform .8s var(--ease);
+}
+.motion-ready .hero .hero-copy.is-visible{
+  opacity:1;
+  transform:translateY(0) !important;
+}
+
+/* все основные карточки получают одинаковую систему появления */
+.motion-ready .benefit,.motion-ready .project,.motion-ready .service,.motion-ready .step,.motion-ready .material,.motion-ready .review,.motion-ready .door-card,.motion-ready .case-large,.motion-ready .case-small,.motion-ready .calc-card,.motion-ready .contact,.motion-ready details{
+  opacity:0;
+  transform:translateY(24px);
+}
+.motion-ready .benefit.is-visible,.motion-ready .project.is-visible,.motion-ready .service.is-visible,.motion-ready .step.is-visible,.motion-ready .material.is-visible,.motion-ready .review.is-visible,.motion-ready .door-card.is-visible,.motion-ready .case-large.is-visible,.motion-ready .case-small.is-visible,.motion-ready .calc-card.is-visible,.motion-ready .contact.is-visible,.motion-ready details.is-visible{
+  opacity:1;
+  transform:none;
+}
+
+@media (max-width:900px){
+  .hero-copy{left:20px;right:20px;width:auto;max-width:none;top:48px;padding-right:0}
+  .hero h1{font-size:clamp(48px,7.2vw,60px);line-height:.96;letter-spacing:-3px;max-width:680px}
+  .hero p{max-width:590px}
+}
+@media (max-width:700px){
+  .hero-copy{left:20px;right:18px;top:38px}
+  .hero h1{font-size:44px;line-height:.96;letter-spacing:-2.8px}
+  .hero .btn.dark{width:auto;min-width:235px}
+}
+@media (prefers-reduced-motion:reduce){
+  .motion-ready .benefit,.motion-ready .project,.motion-ready .service,.motion-ready .step,.motion-ready .material,.motion-ready .review,.motion-ready .door-card,.motion-ready .case-large,.motion-ready .case-small,.motion-ready .calc-card,.motion-ready .contact,.motion-ready details,.motion-ready .hero .hero-copy{opacity:1;transform:none;transition:none}
+}
+</style>
+<style>
+/* === FINAL RESPONSIVE OVERRIDES — cascade-safe, desktop (>1150px) untouched === */
+.video-label-short{display:none}
+@media(max-width:1150px){
+  .services{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .reviews{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:900px){
+  .services{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .services{grid-template-columns:1fr}
+  .reviews{display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:12px;padding-bottom:6px}
+  .reviews::-webkit-scrollbar{display:none}
+  .review{flex:0 0 min(86%,340px);scroll-snap-align:center}
+  .faq{padding-left:14px}
+  .material-list{padding-left:14px}
+  .case-large:after,.case-small:after{background:linear-gradient(180deg,transparent 12%,rgba(0,0,0,.9) 74%)}
+  .case-info,.case-info p,.case-info span{color:#fff}
+  .case-info{text-shadow:0 2px 16px rgba(0,0,0,.6)}
+  .hero{
+    display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;
+    height:auto;
+    min-height:calc(100vh - 64px);
+    min-height:calc(100svh - 64px);
+    padding:84px 20px 38px;
+    overflow:hidden;
+  }
+  .hero-bg{will-change:transform;transform-origin:50% 58%;transform:scale(1.06)}
+  .hero-shade{background:linear-gradient(180deg,rgba(0,0,0,.14) 0%,rgba(0,0,0,0) 24%,rgba(0,0,0,.44) 70%,rgba(0,0,0,.82) 100%)}
+  .hero > .hero-card{display:none}
+  .hero-copy{position:relative;top:auto;left:auto;right:auto;width:100%;max-width:none;margin:0;padding:0}
+  .hero .eyebrow{font-size:11px;letter-spacing:.16em;margin-bottom:14px;color:rgba(255,255,255,.8)}
+  .hero h1{max-width:none;font-size:clamp(40px,11vw,50px);line-height:.98;letter-spacing:-2.6px;margin:0 0 16px}
+  .hero p{max-width:26em;font-size:16px;line-height:1.52;margin:0 0 26px;color:rgba(255,255,255,.93)}
+  .hero .actions{align-items:stretch;flex-direction:column;gap:12px;width:100%}
+  .hero .btn.dark{width:100%;min-width:0;min-height:54px;padding:15px 22px;font-size:16px;justify-content:space-between}
+  .hero .video{justify-content:center;min-height:46px;gap:10px;font-size:14px}
+  .hero-sub-long{display:none}
+  .video-label-long{display:none}
+  .video-label-short{display:inline}
+  .hero-copy > *{opacity:0;animation:mobileHeroRise .9s cubic-bezier(.22,1,.36,1) forwards}
+  .hero-copy .eyebrow{animation-delay:.06s}
+  .hero-copy h1{animation-delay:.16s}
+  .hero-copy p{animation-delay:.3s}
+  .hero-copy .actions{animation-delay:.42s}
+  @keyframes mobileHeroRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-copy > *{animation:none;opacity:1;transform:none}
+  .hero-bg{transform:none}
+}
+</style>
+<script>
+(function(){
+  const selector = '.benefit,.project,.service,.step,.material,.review,.door-card,.case-large,.case-small,.calc-card,.contact,details';
+  document.querySelectorAll(selector).forEach((el,i)=>{
+    el.classList.add('reveal');
+    el.style.transitionDelay = `${Math.min((i % 4) * 80, 240)}ms`;
+  });
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    },{threshold:.08,rootMargin:'0px 0px -40px'});
+    document.querySelectorAll(selector).forEach(el=>io.observe(el));
+  } else {
+    document.querySelectorAll(selector).forEach(el=>el.classList.add('is-visible'));
+  }
+})();
+</script>
+<script>
+/* Mobile first-hero cinematic scroll — parallax + gentle fade, desktop untouched, native scroll after hero */
+(function(){
+  var mq = window.matchMedia('(max-width:700px)');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var hero = document.querySelector('.hero');
+  if (!hero) return;
+  var bg = hero.querySelector('.hero-bg');
+  var copy = hero.querySelector('.hero-copy');
+  if (!bg) return;
+
+  var ticking = false;
+  var active = false;
+
+  function update(){
+    ticking = false;
+    if (!mq.matches) { reset(); return; }
+    var r = hero.getBoundingClientRect();
+    if (r.top > 0) { reset(); return; }
+    var p = Math.min(1, Math.max(0, -r.top / r.height));
+    if (p <= 0.001) { reset(); return; }
+    active = true;
+    var scale = 1.06 + p * 0.10;
+    var ty = p * -10;
+    bg.style.transform = 'translate3d(0,' + ty + 'px,0) scale(' + scale + ')';
+    if (copy) {
+      copy.style.transition = 'none';
+      copy.style.opacity = Math.max(0, 1 - p * 1.4);
+      copy.style.setProperty('transform', 'translate3d(0,' + (p * -26) + 'px,0)', 'important');
+    }
+  }
+
+  function reset(){
+    if (!active && !bg.style.transform) return;
+    active = false;
+    bg.style.transform = '';
+    if (copy) {
+      copy.style.transition = '';
+      copy.style.opacity = '';
+      copy.style.removeProperty('transform');
+    }
+  }
+
+  window.addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(update); } }, {passive:true});
+  window.addEventListener('resize', update);
+})();
+</script>
+</body>
+</html>
