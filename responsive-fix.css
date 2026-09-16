@@ -1,229 +1,92 @@
 /* RESPONSIVE DETAIL FIXES. Desktop is untouched. */
 
-/* ==========================================================
-   MOBILE FAQ — clean list, no nested/shifting cards
-   ========================================================== */
+/* Mobile hero catalogue link: center the entire control as one unit. */
 @media (max-width:700px){
-  .section--faq{
-    overflow:hidden;
-  }
-
-  .section--faq .faq-wrap{
-    width:100%;
-    min-width:0;
-    gap:22px;
-  }
-
-  .section--faq .faq{
+  .hero .actions{
     width:100% !important;
-    min-width:0 !important;
-    margin:0 !important;
-    padding:0 !important;
-    border-top:0 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    justify-content:flex-start !important;
   }
 
+  .hero .video{
+    width:max-content !important;
+    max-width:calc(100% - 20px) !important;
+    align-self:flex-start !important;
+    margin-left:50% !important;
+    margin-right:0 !important;
+    transform:translateX(-50%) !important;
+    position:relative !important;
+    left:0 !important;
+    right:auto !important;
+    justify-content:center !important;
+    white-space:nowrap !important;
+  }
+
+  .hero .video .play{
+    flex:0 0 38px !important;
+  }
+
+  /* Mobile FAQ — clean cards. */
+  .section--faq{overflow:hidden;}
+  .section--faq .faq-wrap{width:100%;min-width:0;gap:22px;}
+  .section--faq .faq{width:100% !important;min-width:0 !important;margin:0 !important;padding:0 !important;border-top:0 !important;}
   .section--faq .faq details{
-    width:100% !important;
-    min-width:0 !important;
-    box-sizing:border-box;
-    margin:0 0 8px !important;
-    padding:17px 18px !important;
-    background:#fff !important;
-    border:1px solid #dedbd5 !important;
-    border-radius:14px !important;
-    box-shadow:none !important;
-    transform:none !important;
+    width:100% !important;min-width:0 !important;box-sizing:border-box;
+    margin:0 0 8px !important;padding:17px 18px !important;
+    background:#fff !important;border:1px solid #dedbd5 !important;border-radius:14px !important;
+    box-shadow:none !important;transform:none !important;
     transition:border-color .2s ease,background .2s ease !important;
   }
-
-  .section--faq .faq details:last-child{
-    margin-bottom:0 !important;
-  }
-
-  .section--faq .faq details:hover,
-  .section--faq .faq details:active{
-    transform:none !important;
-    box-shadow:none !important;
-  }
-
+  .section--faq .faq details:last-child{margin-bottom:0 !important;}
+  .section--faq .faq details:hover,.section--faq .faq details:active{transform:none !important;box-shadow:none !important;}
   .section--faq .faq summary{
-    width:100% !important;
-    min-width:0;
-    box-sizing:border-box;
-    display:flex !important;
-    align-items:flex-start !important;
-    justify-content:space-between;
-    gap:14px;
-    margin:0 !important;
-    padding:0 !important;
-    font-size:16px !important;
-    line-height:1.4 !important;
-    font-weight:400;
+    width:100% !important;min-width:0;box-sizing:border-box;display:flex !important;
+    align-items:flex-start !important;justify-content:space-between;gap:14px;
+    margin:0 !important;padding:0 !important;font-size:16px !important;line-height:1.4 !important;font-weight:400;
   }
-
   .section--faq .faq summary::after{
-    content:"+" !important;
-    flex:0 0 24px;
-    width:24px;
-    height:24px;
-    margin:0 !important;
-    border:1px solid #d4d0c9;
-    border-radius:50%;
-    display:grid;
-    place-items:center;
-    box-sizing:border-box;
-    color:#77736c;
-    font-size:14px;
-    line-height:1;
+    content:"+" !important;flex:0 0 24px;width:24px;height:24px;margin:0 !important;
+    border:1px solid #d4d0c9;border-radius:50%;display:grid;place-items:center;box-sizing:border-box;
+    color:#77736c;font-size:14px;line-height:1;
   }
-
-  .section--faq .faq details[open] summary::after{
-    content:"−" !important;
-    color:#202020;
-  }
-
+  .section--faq .faq details[open] summary::after{content:"−" !important;color:#202020;}
   .section--faq .faq details p{
-    width:100%;
-    max-width:none !important;
-    box-sizing:border-box;
-    margin:11px 0 0 !important;
-    padding:0 !important;
-    font-size:15px !important;
-    line-height:1.55 !important;
-    color:#77736d;
+    width:100%;max-width:none !important;box-sizing:border-box;margin:11px 0 0 !important;padding:0 !important;
+    font-size:15px !important;line-height:1.55 !important;color:#77736d;
   }
 
-  /* Keep long questions from colliding with the action circle. */
-  .section--faq .faq summary::first-line{
-    max-width:100%;
-  }
-
-  /* Reviews: mobile horizontal carousel. */
+  /* Mobile reviews carousel. */
   .section--reviews .reviews{
-    display:flex !important;
-    flex-wrap:nowrap !important;
-    overflow-x:auto !important;
-    overflow-y:hidden !important;
-    scroll-snap-type:x mandatory;
-    scroll-behavior:smooth;
-    overscroll-behavior-x:contain;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-    gap:12px !important;
-    padding:2px 2px 8px !important;
-    margin:0 !important;
+    display:flex !important;flex-wrap:nowrap !important;overflow-x:auto !important;overflow-y:hidden !important;
+    scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;gap:12px !important;padding:2px 2px 8px !important;margin:0 !important;
   }
-
   .section--reviews .reviews::-webkit-scrollbar{display:none}
-
   .section--reviews .review{
-    flex:0 0 calc(100% - 28px) !important;
-    width:calc(100% - 28px) !important;
-    min-width:calc(100% - 28px) !important;
-    margin:0 !important;
-    box-sizing:border-box;
-    scroll-snap-align:start;
-    scroll-snap-stop:always;
+    flex:0 0 calc(100% - 28px) !important;width:calc(100% - 28px) !important;min-width:calc(100% - 28px) !important;
+    margin:0 !important;box-sizing:border-box;scroll-snap-align:start;scroll-snap-stop:always;
   }
-
-  .reviews-ui{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:12px;
-    margin-top:14px;
-    min-height:36px;
-  }
-  .reviews-ui__hint{
-    font-size:11px;
-    line-height:1.3;
-    color:#89857e;
-    letter-spacing:.01em;
-  }
-  .reviews-ui__actions{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    flex:0 0 auto;
-  }
-  .reviews-ui__button{
-    width:35px;
-    height:35px;
-    padding:0;
-    border:1px solid #d1cdc6;
-    border-radius:50%;
-    background:#fff;
-    color:#202020;
-    display:grid;
-    place-items:center;
-    font-size:16px;
-    line-height:1;
-  }
-  .reviews-ui__dots{
-    display:flex;
-    align-items:center;
-    gap:5px;
-    padding:0 2px;
-  }
-  .reviews-ui__dot{
-    width:6px;
-    height:6px;
-    padding:0;
-    border:0;
-    border-radius:50%;
-    background:#c9c5be;
-    opacity:.7;
-  }
-  .reviews-ui__dot.is-active{
-    width:18px;
-    border-radius:999px;
-    background:#202020;
-    opacity:1;
-  }
+  .reviews-ui{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;min-height:36px;}
+  .reviews-ui__hint{font-size:11px;line-height:1.3;color:#89857e;letter-spacing:.01em;}
+  .reviews-ui__actions{display:flex;align-items:center;gap:7px;flex:0 0 auto;}
+  .reviews-ui__button{width:35px;height:35px;padding:0;border:1px solid #d1cdc6;border-radius:50%;background:#fff;color:#202020;display:grid;place-items:center;font-size:16px;line-height:1;}
+  .reviews-ui__dots{display:flex;align-items:center;gap:5px;padding:0 2px;}
+  .reviews-ui__dot{width:6px;height:6px;padding:0;border:0;border-radius:50%;background:#c9c5be;opacity:.7;}
+  .reviews-ui__dot.is-active{width:18px;border-radius:999px;background:#202020;opacity:1;}
 }
 
-@media (min-width:701px){
-  .reviews-ui{display:none !important}
-}
+@media (min-width:701px){.reviews-ui{display:none !important}}
 
 /* Materials spacing. */
 @media (max-width:600px){
-  .section--materials{
-    padding-left:16px !important;
-    padding-right:16px !important;
-  }
-  .section--materials .materials{
-    width:100%;
-    margin:0;
-    gap:18px;
-    grid-template-columns:1fr;
-    align-items:stretch;
-  }
-  .section--materials .material-photo{
-    width:100%;
-    height:auto !important;
-    aspect-ratio:4 / 3;
-    margin:0;
-    border-radius:14px;
-  }
-  .section--materials .material-list{
-    width:100%;
-    margin:0;
-    padding:0 0 62px;
-    border-top:1px solid var(--line);
-  }
-  .section--materials .material{
-    width:100%;
-    min-height:60px;
-    margin:0;
-    padding:16px 14px;
-    box-sizing:border-box;
-    align-items:center;
-  }
-  .section--materials .material span:first-child{
-    min-width:0;
-    padding-right:10px;
-  }
+  .section--materials{padding-left:16px !important;padding-right:16px !important;}
+  .section--materials .materials{width:100%;margin:0;gap:18px;grid-template-columns:1fr;align-items:stretch;}
+  .section--materials .material-photo{width:100%;height:auto !important;aspect-ratio:4 / 3;margin:0;border-radius:14px;}
+  .section--materials .material-list{width:100%;margin:0;padding:0 0 62px;border-top:1px solid var(--line);}
+  .section--materials .material{width:100%;min-height:60px;margin:0;padding:16px 14px;box-sizing:border-box;align-items:center;}
+  .section--materials .material span:first-child{min-width:0;padding-right:10px;}
   .section--materials .material span:last-child{flex:0 0 auto}
 }
 
@@ -232,17 +95,27 @@
   .section--faq .faq summary{font-size:15px !important;line-height:1.42 !important}
   .section--faq .faq summary::after{flex-basis:23px;width:23px;height:23px}
   .section--faq .faq details p{font-size:14.5px !important;line-height:1.55 !important}
-
-  .section--reviews .review{
-    flex-basis:calc(100% - 20px) !important;
-    width:calc(100% - 20px) !important;
-    min-width:calc(100% - 20px) !important;
-  }
+  .section--reviews .review{flex-basis:calc(100% - 20px) !important;width:calc(100% - 20px) !important;min-width:calc(100% - 20px) !important;}
   .reviews-ui{margin-top:12px}
   .reviews-ui__hint{font-size:10px}
   .reviews-ui__button{width:33px;height:33px}
-
   .section--materials .materials{gap:16px}
   .section--materials .material{min-height:58px;padding:15px 13px}
   .section--materials .material-list{padding-bottom:58px}
+}
+
+/* Mobile catalogue categories: all options stay inside the viewport. */
+@media (max-width:600px){
+  #catalog .door-tabs{
+    display:grid !important;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px !important;
+    width:100%;overflow:visible !important;padding:0 !important;margin:0 0 12px !important;
+  }
+  #catalog .door-tab{
+    width:100%;min-width:0;flex:initial !important;box-sizing:border-box;padding:9px 8px !important;
+    min-height:40px;font-size:12px !important;line-height:1.2;text-align:center;white-space:normal;overflow-wrap:anywhere;
+  }
+}
+@media (max-width:375px){
+  #catalog .door-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px !important;}
+  #catalog .door-tab{padding:8px 6px !important;font-size:11.5px !important;}
 }
