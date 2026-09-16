@@ -1,19 +1,8 @@
 /* FINAL MOBILE OVERRIDES. Desktop is untouched. */
 @media (max-width:700px){
-  /* Hero: keep the catalogue control centered and stable. */
-  .hero .actions{
-    align-items:center !important;
-    width:100%;
-  }
+  /* Hero: remove the secondary catalogue control completely on mobile. */
   .hero .video{
-    align-self:center !important;
-    width:auto !important;
-    max-width:100%;
-    margin:0 auto !important;
-    display:inline-flex !important;
-    align-items:center;
-    justify-content:center;
-    white-space:nowrap;
+    display:none !important;
   }
 
   /* Catalog categories: no horizontal clipping. Every tab is visible. */
